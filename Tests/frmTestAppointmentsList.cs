@@ -1,4 +1,5 @@
-﻿using DVLD_Business;
+﻿using DVDL_Classes;
+using DVLD_Business;
 using DVLD_DivideAndConquer.Properties;
 using System;
 using System.Collections.Generic;
@@ -129,6 +130,35 @@ namespace DVLD_DivideAndConquer.Tests
                 //---
 
             
+        }
+
+        private void editToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            int TestAppointmentID = (int)dgvLicenseTestAppointments.CurrentRow.Cells[0].Value;
+
+
+            frmScheduleTest frm = new frmScheduleTest(_LocalDrivingLicenseApplicationID, _TestType, TestAppointmentID);
+            frm.ShowDialog();
+            frmTestAppointmentsList_Load(null, null);
+        }
+
+        private void takeTestToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            int TestAppointmentID = (int)dgvLicenseTestAppointments.CurrentRow.Cells[0].Value;
+
+            frmTakeTest frm = new frmTakeTest(TestAppointmentID, _TestType);
+            frm.ShowDialog();
+            frmTestAppointmentsList_Load(null, null);
+        }
+
+        private void dgvLicenseTestAppointments_CellMouseLeave(object sender, DataGridViewCellEventArgs e)
+        {
+            clsGlobal.DataGridView_CellMouseLeave(sender, e);
+        }
+
+        private void dgvLicenseTestAppointments_CellMouseMove(object sender, DataGridViewCellMouseEventArgs e)
+        {
+            clsGlobal.DataGridView_CellMouseMove(sender, e);
         }
     }
 }

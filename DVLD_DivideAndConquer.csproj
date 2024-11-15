@@ -173,6 +173,12 @@
     <Compile Include="Tests\frmScheduleTest.Designer.cs">
       <DependentUpon>frmScheduleTest.cs</DependentUpon>
     </Compile>
+    <Compile Include="Tests\frmTakeTest.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Tests\frmTakeTest.Designer.cs">
+      <DependentUpon>frmTakeTest.cs</DependentUpon>
+    </Compile>
     <Compile Include="Tests\frmTestAppointmentsList.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -291,6 +297,9 @@
     <EmbeddedResource Include="Tests\frmScheduleTest.resx">
       <DependentUpon>frmScheduleTest.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Tests\frmTakeTest.resx">
+      <DependentUpon>frmTakeTest.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Tests\frmTestAppointmentsList.resx">
       <DependentUpon>frmTestAppointmentsList.cs</DependentUpon>
     </EmbeddedResource>
@@ -408,12 +417,15 @@
     <None Include="Resources\national no  32.png" />
     <Content Include="Resources\new -45.png" />
     <None Include="Resources\Next50.png" />
+    <None Include="Resources\Notes64.png" />
+    <None Include="Resources\note64.png" />
     <Content Include="Resources\person  32.png" />
     <Content Include="Resources\person.png" />
     <None Include="Resources\phone  32.png" />
     <Content Include="Resources\release-45.png" />
     <Content Include="Resources\renew-45.png" />
     <Content Include="Resources\replacement - 45.png" />
+    <None Include="Resources\Result64.png" />
     <Content Include="Resources\retalk-45.png" />
     <None Include="Resources\save.png" />
     <None Include="Resources\save32.png" />

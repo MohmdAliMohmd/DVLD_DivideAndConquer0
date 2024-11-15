@@ -633,6 +633,26 @@ namespace DVLD_DivideAndConquer.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap note64 {
+            get {
+                object obj = ResourceManager.GetObject("note64", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Notes64 {
+            get {
+                object obj = ResourceManager.GetObject("Notes64", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap person {
             get {
                 object obj = ResourceManager.GetObject("person", resourceCulture);
@@ -676,6 +696,16 @@ namespace DVLD_DivideAndConquer.Properties {
         internal static System.Drawing.Bitmap replacement___45 {
             get {
                 object obj = ResourceManager.GetObject("replacement - 45", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Result64 {
+            get {
+                object obj = ResourceManager.GetObject("Result64", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
