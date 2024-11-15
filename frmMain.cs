@@ -1,7 +1,9 @@
 ﻿using DVDL_Classes;
+using DVLD_DivideAndConquer.Applications.ApplicationTypes;
 using DVLD_DivideAndConquer.Applications.Local_Driving_License;
 using DVLD_DivideAndConquer.Drivers;
 using DVLD_DivideAndConquer.People;
+using DVLD_DivideAndConquer.Tests.Test_Types;
 using DVLD_DivideAndConquer.User;
 using System;
 using System.Collections.Generic;
@@ -78,6 +80,19 @@ namespace DVLD_DivideAndConquer
         {
             frmLocalDrivingLicenseApplicationsList frm = new frmLocalDrivingLicenseApplicationsList();
             frm.ShowDialog();
+        }
+
+        private void manageTestTypesToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmTestTypesList frm = new frmTestTypesList();
+            frm.ShowDialog();
+        }
+
+        private void manageApplicationTypesToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+             frmApplicationTypesList frm = new  frmApplicationTypesList();
+            frm.ShowDialog();
+        
         }
     }
 }

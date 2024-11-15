@@ -89,7 +89,6 @@ namespace DVLD_Business
 
         public static clsLocalDrivingLicenseApplication FindByApplicationID(int ApplicationID)
         {
-            // 
             int LocalDrivingLicenseApplicationID = -1, LicenseClassID = -1;
 
             bool IsFound = clsLocalDrivingLicenseApplicationData.GetLocalDrivingLicenseApplicationsInfoByApplicationID

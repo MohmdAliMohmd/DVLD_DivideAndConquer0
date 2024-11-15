@@ -69,7 +69,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Segoe UI Semibold", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(154, 103);
+            this.label1.Location = new System.Drawing.Point(144, 103);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(37, 25);
@@ -101,7 +101,7 @@
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Segoe UI Semibold", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(136, 281);
+            this.label6.Location = new System.Drawing.Point(126, 281);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(55, 25);
             this.label6.TabIndex = 146;
@@ -111,7 +111,7 @@
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Segoe UI Semibold", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(137, 143);
+            this.label5.Location = new System.Drawing.Point(127, 143);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(54, 25);
             this.label5.TabIndex = 144;
@@ -133,7 +133,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Segoe UI Semibold", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(76, 178);
+            this.label2.Location = new System.Drawing.Point(66, 178);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(115, 25);
             this.label2.TabIndex = 155;
@@ -151,9 +151,9 @@
             // pictureBox4
             // 
             this.pictureBox4.Image = global::DVLD_DivideAndConquer.Properties.Resources.Description64;
-            this.pictureBox4.Location = new System.Drawing.Point(194, 178);
+            this.pictureBox4.Location = new System.Drawing.Point(186, 178);
             this.pictureBox4.Name = "pictureBox4";
-            this.pictureBox4.Size = new System.Drawing.Size(30, 29);
+            this.pictureBox4.Size = new System.Drawing.Size(38, 33);
             this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox4.TabIndex = 154;
             this.pictureBox4.TabStop = false;
@@ -218,9 +218,9 @@
             // pictureBox3
             // 
             this.pictureBox3.Image = global::DVLD_DivideAndConquer.Properties.Resources.Fees64;
-            this.pictureBox3.Location = new System.Drawing.Point(193, 279);
+            this.pictureBox3.Location = new System.Drawing.Point(185, 277);
             this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(30, 29);
+            this.pictureBox3.Size = new System.Drawing.Size(38, 33);
             this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox3.TabIndex = 145;
             this.pictureBox3.TabStop = false;
@@ -228,9 +228,9 @@
             // pictureBox2
             // 
             this.pictureBox2.Image = global::DVLD_DivideAndConquer.Properties.Resources.Title64;
-            this.pictureBox2.Location = new System.Drawing.Point(193, 141);
+            this.pictureBox2.Location = new System.Drawing.Point(185, 139);
             this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(30, 29);
+            this.pictureBox2.Size = new System.Drawing.Size(38, 33);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox2.TabIndex = 143;
             this.pictureBox2.TabStop = false;
@@ -267,7 +267,7 @@
             this.Controls.Add(this.pictureBox2);
             this.Font = new System.Drawing.Font("Segoe UI Semibold", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.Margin = new System.Windows.Forms.Padding(6);
             this.Name = "frmEditTestType";
             this.Text = "frmEditTestType";
             this.Load += new System.EventHandler(this.frmEditTestType_Load);

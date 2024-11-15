@@ -10,6 +10,7 @@ namespace DVLD_Business
         public enMode Mode = enMode.AddNew;
         public int TestID { set; get; }
         public int TestAppointmentID { set; get; }
+        public clsTestAppointment TestAppointmentInfo { set; get; }
         public bool TestResult { set; get; }
         public string Notes { set; get; }
         public int CreatedByUserID { set; get; }
@@ -27,6 +28,7 @@ namespace DVLD_Business
         {
             this.TestID = TestID;
             this.TestAppointmentID = TestAppointmentID;
+            TestAppointmentInfo = clsTestAppointment.Find(TestAppointmentID);
             this.TestResult = TestResult;
             this.Notes = Notes;
             this.CreatedByUserID = CreatedByUserID;
