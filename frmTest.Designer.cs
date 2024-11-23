@@ -44,13 +44,19 @@
             this.txtUserID = new System.Windows.Forms.TextBox();
             this.btnShowUserInfo = new System.Windows.Forms.Button();
             this.ctrlUserCard1 = new DVLD_DivideAndConquer.User.Controls.ctrlUserCard();
+            this.tabPage4 = new System.Windows.Forms.TabPage();
+            this.ctrlScheduleTest1 = new DVLD_DivideAndConquer.Tests.Controls.ctrlScheduleTest();
+            this.tabPage5 = new System.Windows.Forms.TabPage();
             this.btnPeopleList = new System.Windows.Forms.Button();
             this.btnTest = new System.Windows.Forms.Button();
+            this.ctrlScheduleTest2 = new DVLD_DivideAndConquer.Tests.Controls.ctrlScheduleTest();
             this.tcTestPersonControls.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.tabPage2.SuspendLayout();
             this.tabPage3.SuspendLayout();
+            this.tabPage4.SuspendLayout();
+            this.tabPage5.SuspendLayout();
             this.SuspendLayout();
             // 
             // btnAddPerson
@@ -78,10 +84,12 @@
             this.tcTestPersonControls.Controls.Add(this.tabPage1);
             this.tcTestPersonControls.Controls.Add(this.tabPage2);
             this.tcTestPersonControls.Controls.Add(this.tabPage3);
+            this.tcTestPersonControls.Controls.Add(this.tabPage4);
+            this.tcTestPersonControls.Controls.Add(this.tabPage5);
             this.tcTestPersonControls.Location = new System.Drawing.Point(31, 89);
             this.tcTestPersonControls.Name = "tcTestPersonControls";
             this.tcTestPersonControls.SelectedIndex = 0;
-            this.tcTestPersonControls.Size = new System.Drawing.Size(1059, 603);
+            this.tcTestPersonControls.Size = new System.Drawing.Size(1059, 655);
             this.tcTestPersonControls.TabIndex = 6;
             // 
             // tabPage1
@@ -90,7 +98,7 @@
             this.tabPage1.Location = new System.Drawing.Point(4, 34);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(1051, 565);
+            this.tabPage1.Size = new System.Drawing.Size(1051, 617);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Test Person Card";
             this.tabPage1.UseVisualStyleBackColor = true;
@@ -156,7 +164,7 @@
             this.tabPage2.Location = new System.Drawing.Point(4, 34);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(1051, 565);
+            this.tabPage2.Size = new System.Drawing.Size(1051, 617);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "TestPerson Card With Filter";
             this.tabPage2.UseVisualStyleBackColor = true;
@@ -182,7 +190,7 @@
             this.tabPage3.Location = new System.Drawing.Point(4, 34);
             this.tabPage3.Name = "tabPage3";
             this.tabPage3.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage3.Size = new System.Drawing.Size(1051, 565);
+            this.tabPage3.Size = new System.Drawing.Size(1051, 617);
             this.tabPage3.TabIndex = 2;
             this.tabPage3.Text = "Test User Card";
             this.tabPage3.UseVisualStyleBackColor = true;
@@ -227,6 +235,36 @@
             this.ctrlUserCard1.Size = new System.Drawing.Size(1023, 443);
             this.ctrlUserCard1.TabIndex = 0;
             // 
+            // tabPage4
+            // 
+            this.tabPage4.Controls.Add(this.ctrlScheduleTest1);
+            this.tabPage4.Location = new System.Drawing.Point(4, 34);
+            this.tabPage4.Name = "tabPage4";
+            this.tabPage4.Size = new System.Drawing.Size(1051, 617);
+            this.tabPage4.TabIndex = 3;
+            this.tabPage4.Text = "Test Sechedule";
+            this.tabPage4.UseVisualStyleBackColor = true;
+            // 
+            // ctrlScheduleTest1
+            // 
+            this.ctrlScheduleTest1.Font = new System.Drawing.Font("Segoe UI Semibold", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ctrlScheduleTest1.Location = new System.Drawing.Point(36, 24);
+            this.ctrlScheduleTest1.Margin = new System.Windows.Forms.Padding(6);
+            this.ctrlScheduleTest1.Name = "ctrlScheduleTest1";
+            this.ctrlScheduleTest1.Size = new System.Drawing.Size(833, 523);
+            this.ctrlScheduleTest1.TabIndex = 0;
+            this.ctrlScheduleTest1.TestTypeID = DVLD_Business.clsTestType.enTestType.VisionTest;
+            // 
+            // tabPage5
+            // 
+            this.tabPage5.Controls.Add(this.ctrlScheduleTest2);
+            this.tabPage5.Location = new System.Drawing.Point(4, 34);
+            this.tabPage5.Name = "tabPage5";
+            this.tabPage5.Size = new System.Drawing.Size(1051, 617);
+            this.tabPage5.TabIndex = 4;
+            this.tabPage5.Text = "SheduledTest";
+            this.tabPage5.UseVisualStyleBackColor = true;
+            // 
             // btnPeopleList
             // 
             this.btnPeopleList.Location = new System.Drawing.Point(398, 12);
@@ -247,11 +285,21 @@
             this.btnTest.UseVisualStyleBackColor = true;
             this.btnTest.Click += new System.EventHandler(this.btnTest_Click);
             // 
+            // ctrlScheduleTest2
+            // 
+            this.ctrlScheduleTest2.Font = new System.Drawing.Font("Segoe UI Semibold", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ctrlScheduleTest2.Location = new System.Drawing.Point(45, 34);
+            this.ctrlScheduleTest2.Margin = new System.Windows.Forms.Padding(6);
+            this.ctrlScheduleTest2.Name = "ctrlScheduleTest2";
+            this.ctrlScheduleTest2.Size = new System.Drawing.Size(833, 523);
+            this.ctrlScheduleTest2.TabIndex = 0;
+            this.ctrlScheduleTest2.TestTypeID = DVLD_Business.clsTestType.enTestType.VisionTest;
+            // 
             // frmTest
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1118, 689);
+            this.ClientSize = new System.Drawing.Size(1016, 749);
             this.Controls.Add(this.btnTest);
             this.Controls.Add(this.btnPeopleList);
             this.Controls.Add(this.tcTestPersonControls);
@@ -268,6 +316,8 @@
             this.tabPage2.ResumeLayout(false);
             this.tabPage3.ResumeLayout(false);
             this.tabPage3.PerformLayout();
+            this.tabPage4.ResumeLayout(false);
+            this.tabPage5.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -292,5 +342,9 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox txtUserID;
         private System.Windows.Forms.Button btnShowUserInfo;
+        private System.Windows.Forms.TabPage tabPage4;
+        private Tests.Controls.ctrlScheduleTest ctrlScheduleTest1;
+        private System.Windows.Forms.TabPage tabPage5;
+        private Tests.Controls.ctrlScheduleTest ctrlScheduleTest2;
     }
 }

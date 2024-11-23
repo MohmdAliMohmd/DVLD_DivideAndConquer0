@@ -111,6 +111,12 @@
     <Compile Include="Global Classes\clsTextBoxFilter.cs" />
     <Compile Include="Global Classes\clsUtil.cs" />
     <Compile Include="Global Classes\clsValidation.cs" />
+    <Compile Include="Licenses\Controls\ctrlDriverLicenses.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Licenses\Controls\ctrlDriverLicenses.Designer.cs">
+      <DependentUpon>ctrlDriverLicenses.cs</DependentUpon>
+    </Compile>
     <Compile Include="LogIn\frmLogIn.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -155,6 +161,36 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Tests\Controls\ctrlScheduleTest.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Tests\Controls\ctrlScheduleTest.Designer.cs">
+      <DependentUpon>ctrlScheduleTest.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Tests\Controls\ctrlSecheduledTest.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Tests\Controls\ctrlSecheduledTest.Designer.cs">
+      <DependentUpon>ctrlSecheduledTest.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Tests\frmScheduleTest.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Tests\frmScheduleTest.Designer.cs">
+      <DependentUpon>frmScheduleTest.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Tests\frmTakeTest.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Tests\frmTakeTest.Designer.cs">
+      <DependentUpon>frmTakeTest.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Tests\frmTestAppointmentsList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Tests\frmTestAppointmentsList.Designer.cs">
+      <DependentUpon>frmTestAppointmentsList.cs</DependentUpon>
+    </Compile>
     <Compile Include="Tests\Test Types\frmEditTestType.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -227,6 +263,9 @@
     <EmbeddedResource Include="frmTest.resx">
       <DependentUpon>frmTest.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Licenses\Controls\ctrlDriverLicenses.resx">
+      <DependentUpon>ctrlDriverLicenses.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="LogIn\frmLogIn.resx">
       <DependentUpon>frmLogIn.cs</DependentUpon>
     </EmbeddedResource>
@@ -258,6 +297,21 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="Tests\Controls\ctrlScheduleTest.resx">
+      <DependentUpon>ctrlScheduleTest.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Tests\Controls\ctrlSecheduledTest.resx">
+      <DependentUpon>ctrlSecheduledTest.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Tests\frmScheduleTest.resx">
+      <DependentUpon>frmScheduleTest.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Tests\frmTakeTest.resx">
+      <DependentUpon>frmTakeTest.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Tests\frmTestAppointmentsList.resx">
+      <DependentUpon>frmTestAppointmentsList.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Tests\Test Types\frmEditTestType.resx">
       <DependentUpon>frmEditTestType.cs</DependentUpon>
     </EmbeddedResource>
@@ -299,11 +353,15 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Licenses\Controls\" />
     <Folder Include="Licenses\Local Licenses\Controls\" />
-    <Folder Include="Tests\Controls\" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Resources\WrittenTest.png" />
+    <None Include="Resources\Written_Test %283%29.png" />
+    <None Include="Resources\Written_Test %281%29.png" />
+    <None Include="Resources\Written_Test2.png" />
+    <None Include="Resources\Written_Test.png" />
+    <None Include="Resources\Vision_Test.png" />
     <None Include="Resources\warning-sign.png" />
     <None Include="Resources\AddPerson-34.png" />
     <None Include="Resources\Applicant64.png" />
@@ -334,6 +392,8 @@
     <Content Include="Resources\document-45.png" />
     <Content Include="Resources\Driver--64.png" />
     <Content Include="Resources\driving-test-45.png" />
+    <None Include="Resources\Driving_Test.png" />
+    <None Include="Resources\Driving_Test2.png" />
     <Content Include="Resources\erase-45.png" />
     <None Include="Resources\id badge  32.png" />
     <None Include="Resources\fullname   32.png" />
@@ -344,6 +404,7 @@
     <None Include="Resources\home  32.png" />
     <None Include="Resources\FindPerson-34.png" />
     <None Include="Resources\Fees64.png" />
+    <None Include="Resources\eye-scan.png" />
     <Content Include="Resources\info3-45.png" />
     <None Include="Resources\international 32.png" />
     <Content Include="Resources\international-45.png" />
@@ -364,12 +425,15 @@
     <None Include="Resources\national no  32.png" />
     <Content Include="Resources\new -45.png" />
     <None Include="Resources\Next50.png" />
+    <None Include="Resources\Notes64.png" />
+    <None Include="Resources\note64.png" />
     <Content Include="Resources\person  32.png" />
     <Content Include="Resources\person.png" />
     <None Include="Resources\phone  32.png" />
     <Content Include="Resources\release-45.png" />
     <Content Include="Resources\renew-45.png" />
     <Content Include="Resources\replacement - 45.png" />
+    <None Include="Resources\Result64.png" />
     <Content Include="Resources\retalk-45.png" />
     <None Include="Resources\save.png" />
     <None Include="Resources\save32.png" />
@@ -385,6 +449,10 @@
     <None Include="Resources\UnKnown_Female.png" />
     <None Include="Resources\type64.png" />
     <None Include="Resources\Title64.png" />
+    <None Include="Resources\test-drive3.png" />
+    <None Include="Resources\test-drive2.png" />
+    <None Include="Resources\test-drive.png" />
+    <None Include="Resources\test-drive21.png" />
     <Content Include="Resources\Users-64.png" />
     <Content Include="Resources\Users64.png" />
   </ItemGroup>
