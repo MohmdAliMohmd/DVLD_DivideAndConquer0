@@ -49,9 +49,9 @@
             this.gbFilter.Controls.Add(this.cbxFilterBy);
             this.gbFilter.Controls.Add(this.label1);
             this.gbFilter.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.gbFilter.Location = new System.Drawing.Point(5, 6);
+            this.gbFilter.Location = new System.Drawing.Point(14, 6);
             this.gbFilter.Name = "gbFilter";
-            this.gbFilter.Size = new System.Drawing.Size(997, 75);
+            this.gbFilter.Size = new System.Drawing.Size(983, 75);
             this.gbFilter.TabIndex = 1;
             this.gbFilter.TabStop = false;
             this.gbFilter.Text = "Filter";
@@ -119,11 +119,11 @@
             // ctrlPersonCard1
             // 
             this.ctrlPersonCard1.Font = new System.Drawing.Font("Segoe UI Semibold", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ctrlPersonCard1.Location = new System.Drawing.Point(5, 81);
+            this.ctrlPersonCard1.Location = new System.Drawing.Point(5, 71);
             this.ctrlPersonCard1.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
             this.ctrlPersonCard1.Name = "ctrlPersonCard1";
             this.ctrlPersonCard1.PersonID = -1;
-            this.ctrlPersonCard1.Size = new System.Drawing.Size(1005, 339);
+            this.ctrlPersonCard1.Size = new System.Drawing.Size(1005, 303);
             this.ctrlPersonCard1.TabIndex = 2;
             // 
             // ctrlPersonCardWithFilter
@@ -131,12 +131,12 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoValidate = System.Windows.Forms.AutoValidate.EnableAllowFocusChange;
-            this.Controls.Add(this.ctrlPersonCard1);
             this.Controls.Add(this.gbFilter);
+            this.Controls.Add(this.ctrlPersonCard1);
             this.Font = new System.Drawing.Font("Segoe UI Semibold", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Margin = new System.Windows.Forms.Padding(6);
             this.Name = "ctrlPersonCardWithFilter";
-            this.Size = new System.Drawing.Size(1011, 422);
+            this.Size = new System.Drawing.Size(1011, 376);
             this.Load += new System.EventHandler(this.ctrlPersonCardWithFilter_Load);
             this.gbFilter.ResumeLayout(false);
             this.gbFilter.PerformLayout();

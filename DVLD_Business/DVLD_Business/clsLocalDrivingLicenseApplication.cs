@@ -280,5 +280,17 @@ namespace DVLD_Business
             return DriverID;
 
         }
+
+        public bool IsLicenseIssued()
+        {
+            return (GetActiveLicenseID() != -1);
+        }
+
+        public int GetActiveLicenseID()
+        {//this will get the license id that belongs to this application
+            return clsLicense.GetActiveLicenseIDByPersonID(this.ApplicantPersonID, this.LicenseClassID);
+        }
+
+       
     }
 }

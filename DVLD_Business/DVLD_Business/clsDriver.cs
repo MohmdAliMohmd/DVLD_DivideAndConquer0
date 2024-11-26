@@ -8,6 +8,7 @@ namespace DVLD_Business
     {
         public enum enMode { AddNew = 0, Update = 1 };
         public enMode Mode = enMode.AddNew;
+        public clsPerson PersonInfo;
         public int DriverID { set; get; }
         public int PersonID { set; get; }
         public int CreatedByUserID { set; get; }
@@ -27,6 +28,7 @@ namespace DVLD_Business
             this.PersonID = PersonID;
             this.CreatedByUserID = CreatedByUserID;
             this.CreatedDate = CreatedDate;
+            this.PersonInfo = clsPerson.Find(this.PersonID);
             Mode = enMode.Update;
         }
         private bool _AddNewDriver()
@@ -55,6 +57,20 @@ namespace DVLD_Business
             bool IsFound = clsDriverData.GetDriverByID(DriverID, ref PersonID, ref CreatedByUserID, ref CreatedDate);
 
             if(IsFound)
+                return new clsDriver(DriverID, PersonID, CreatedByUserID, CreatedDate);
+            else
+                return null;
+        }
+
+        public static clsDriver FindByPersonID(int PersonID)
+        {
+            int DriverID = -1;
+            int CreatedByUserID = -1;
+            DateTime CreatedDate = DateTime.MinValue;
+
+            bool IsFound = clsDriverData.GetDriverByPersonID(  PersonID, ref DriverID, ref CreatedByUserID, ref CreatedDate);
+
+            if (IsFound)
                 return new clsDriver(DriverID, PersonID, CreatedByUserID, CreatedDate);
             else
                 return null;
@@ -97,7 +113,7 @@ namespace DVLD_Business
                 return null;
         }
 
-        public static clsDriver FindByPersonID(int PersonID)
+        public static clsDriver FindByPersonID2(int PersonID)
         {
             int DriverID = -1;
             int CreatedByUserID = -1;
@@ -108,5 +124,16 @@ namespace DVLD_Business
             else
                 return null;
         }
+
+        public static DataTable GetLicenses(int DriverID)
+        {
+            return clsLicense.GetDriverLicenses(DriverID);
+        }
+
+        public static DataTable GetInternationalLicenses(int DriverID)
+        {
+            return clsInternationalLicenseData.GetDriverInternationalLicenses(DriverID);
+        }
+
     }
 }

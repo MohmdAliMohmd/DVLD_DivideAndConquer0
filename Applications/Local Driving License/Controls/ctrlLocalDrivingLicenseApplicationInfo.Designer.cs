@@ -1,6 +1,6 @@
 ﻿namespace DVLD_DivideAndConquer.Applications.Local_Driving_License.Controls
 {
-    partial class ctrlLocalDrivingLicenseInfo
+    partial class ctrlLocalDrivingLicenseApplicationInfo
     {
         /// <summary> 
         /// Required designer variable.
@@ -53,7 +53,7 @@
             this.ctrlApplicationBasicInfo1.Location = new System.Drawing.Point(0, 113);
             this.ctrlApplicationBasicInfo1.Margin = new System.Windows.Forms.Padding(6);
             this.ctrlApplicationBasicInfo1.Name = "ctrlApplicationBasicInfo1";
-            this.ctrlApplicationBasicInfo1.Size = new System.Drawing.Size(905, 273);
+            this.ctrlApplicationBasicInfo1.Size = new System.Drawing.Size(902, 273);
             this.ctrlApplicationBasicInfo1.TabIndex = 0;
             // 
             // label1
@@ -187,7 +187,7 @@
             this.gbDrivingLicenseApplicationInfo.TabStop = false;
             this.gbDrivingLicenseApplicationInfo.Text = "Driving License Application Info";
             // 
-            // ctrlLocalDrivingLicenseInfo
+            // ctrlLocalDrivingLicenseApplicationInfo
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -195,8 +195,8 @@
             this.Controls.Add(this.ctrlApplicationBasicInfo1);
             this.Font = new System.Drawing.Font("Segoe UI Semibold", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Margin = new System.Windows.Forms.Padding(6);
-            this.Name = "ctrlLocalDrivingLicenseInfo";
-            this.Size = new System.Drawing.Size(905, 386);
+            this.Name = "ctrlLocalDrivingLicenseApplicationInfo";
+            this.Size = new System.Drawing.Size(902, 386);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();

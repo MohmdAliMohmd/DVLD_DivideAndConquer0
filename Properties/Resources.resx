@@ -145,6 +145,9 @@
   <data name="UnKnown_Male" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\UnKnown_Male.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="SEARCH50" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\SEARCH50.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="cancel2-50" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\cancel2-50.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -202,8 +205,8 @@
   <data name="license-45" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\license-45.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="renew-45" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\renew-45.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="note64" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\note64.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Created by64" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Created by64.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -223,14 +226,14 @@
   <data name="cancel2-32" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\cancel2-32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Applicant64" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Applicant64.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="License Class 64" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\License Class 64.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="banned-45" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\banned-45.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="SEARCH64" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\SEARCH64.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Driver--64" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Driver--64.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -264,6 +267,9 @@
   </data>
   <data name="close-45" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\close-45.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Issue40" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Issue40.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Title64" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Title64.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -301,14 +307,17 @@
   <data name="License Class64" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\License Class64.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="created by2-64" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\created by2-64.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="international-45" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\international-45.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Status" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Status.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="created by2-64" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\created by2-64.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Applicant64" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Applicant64.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="test-drive21" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\test-drive21.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -337,11 +346,14 @@
   <data name="DeletedMaleImage" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\DeletedMaleImage.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="AddPerson-34" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\AddPerson-34.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="gender" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\gender.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="signature" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\signature.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="issue50" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\issue50.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="WrittenTest" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\WrittenTest.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -373,6 +385,9 @@
   <data name="logout 50" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\logout 50.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="signature" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\signature.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="lock" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\lock.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -385,16 +400,19 @@
   <data name="Description64" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Description64.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="search" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\search.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="retalk-45" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\retalk-45.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="warning-sign" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\warning-sign.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="AddPerson-34" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\AddPerson-34.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="renew-45" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\renew-45.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="note64" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\note64.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Issue35" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Issue35.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

@@ -44,7 +44,7 @@
             this.button2 = new System.Windows.Forms.Button();
             this.btnClose = new System.Windows.Forms.Button();
             this.lblTitle = new System.Windows.Forms.Label();
-            this.ctrlLocalDrivingLicenseInfo1 = new DVLD_DivideAndConquer.Applications.Local_Driving_License.Controls.ctrlLocalDrivingLicenseInfo();
+            this.ctrlLocalDrivingLicenseInfo1 = new DVLD_DivideAndConquer.Applications.Local_Driving_License.Controls.ctrlLocalDrivingLicenseApplicationInfo();
             ((System.ComponentModel.ISupportInitialize)(this.pbxTestTypeIMG)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvLicenseTestAppointments)).BeginInit();
             this.cmsApplications.SuspendLayout();
@@ -243,7 +243,7 @@
 
         #endregion
         private System.Windows.Forms.PictureBox pbxTestTypeIMG;
-        private Applications.Local_Driving_License.Controls.ctrlLocalDrivingLicenseInfo ctrlLocalDrivingLicenseInfo1;
+        private Applications.Local_Driving_License.Controls.ctrlLocalDrivingLicenseApplicationInfo ctrlLocalDrivingLicenseInfo1;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label lblRecordsCount;
         private System.Windows.Forms.Label label2;

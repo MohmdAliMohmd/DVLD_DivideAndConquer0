@@ -11,7 +11,7 @@ using System.Windows.Forms;
 
 namespace DVLD_DivideAndConquer.Applications.Local_Driving_License.Controls
 {
-    public partial class ctrlLocalDrivingLicenseInfo : UserControl
+    public partial class ctrlLocalDrivingLicenseApplicationInfo : UserControl
     {
         clsLocalDrivingLicenseApplication _LocalDrivingLicenseApplication;
         int _LocalDrivingLicenseApplicationID = -1;
@@ -27,7 +27,7 @@ namespace DVLD_DivideAndConquer.Applications.Local_Driving_License.Controls
             }
         }
         #endregion
-        public ctrlLocalDrivingLicenseInfo()
+        public ctrlLocalDrivingLicenseApplicationInfo()
         {
             InitializeComponent();
         }

@@ -87,7 +87,7 @@
             // 
             this.lblCountry.AutoSize = true;
             this.lblCountry.Font = new System.Drawing.Font("Segoe UI Semibold", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCountry.Location = new System.Drawing.Point(550, 221);
+            this.lblCountry.Location = new System.Drawing.Point(550, 203);
             this.lblCountry.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblCountry.Name = "lblCountry";
             this.lblCountry.Size = new System.Drawing.Size(63, 30);
@@ -98,7 +98,7 @@
             // 
             this.label13.AutoSize = true;
             this.label13.Font = new System.Drawing.Font("Segoe UI Semibold", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label13.Location = new System.Drawing.Point(412, 224);
+            this.label13.Location = new System.Drawing.Point(412, 206);
             this.label13.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(87, 25);
@@ -109,7 +109,7 @@
             // 
             this.lblPhone.AutoSize = true;
             this.lblPhone.Font = new System.Drawing.Font("Segoe UI Semibold", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblPhone.Location = new System.Drawing.Point(550, 181);
+            this.lblPhone.Location = new System.Drawing.Point(550, 163);
             this.lblPhone.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblPhone.Name = "lblPhone";
             this.lblPhone.Size = new System.Drawing.Size(63, 30);
@@ -120,7 +120,7 @@
             // 
             this.label15.AutoSize = true;
             this.label15.Font = new System.Drawing.Font("Segoe UI Semibold", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label15.Location = new System.Drawing.Point(428, 184);
+            this.label15.Location = new System.Drawing.Point(428, 166);
             this.label15.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label15.Name = "label15";
             this.label15.Size = new System.Drawing.Size(71, 25);
@@ -131,7 +131,7 @@
             // 
             this.lblDateOfBirth.AutoSize = true;
             this.lblDateOfBirth.Font = new System.Drawing.Font("Segoe UI Semibold", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblDateOfBirth.Location = new System.Drawing.Point(550, 141);
+            this.lblDateOfBirth.Location = new System.Drawing.Point(550, 123);
             this.lblDateOfBirth.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblDateOfBirth.Name = "lblDateOfBirth";
             this.lblDateOfBirth.Size = new System.Drawing.Size(63, 30);
@@ -142,7 +142,7 @@
             // 
             this.label17.AutoSize = true;
             this.label17.Font = new System.Drawing.Font("Segoe UI Semibold", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label17.Location = new System.Drawing.Point(368, 144);
+            this.label17.Location = new System.Drawing.Point(368, 126);
             this.label17.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label17.Name = "label17";
             this.label17.Size = new System.Drawing.Size(131, 25);
@@ -153,7 +153,7 @@
             // 
             this.lblAddress.AutoSize = true;
             this.lblAddress.Font = new System.Drawing.Font("Segoe UI Semibold", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblAddress.Location = new System.Drawing.Point(187, 261);
+            this.lblAddress.Location = new System.Drawing.Point(187, 243);
             this.lblAddress.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblAddress.Name = "lblAddress";
             this.lblAddress.Size = new System.Drawing.Size(63, 30);
@@ -164,7 +164,7 @@
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Segoe UI Semibold", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(19, 264);
+            this.label7.Location = new System.Drawing.Point(19, 246);
             this.label7.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(85, 25);
@@ -175,7 +175,7 @@
             // 
             this.lblEmail.AutoSize = true;
             this.lblEmail.Font = new System.Drawing.Font("Segoe UI Semibold", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblEmail.Location = new System.Drawing.Point(187, 221);
+            this.lblEmail.Location = new System.Drawing.Point(187, 203);
             this.lblEmail.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblEmail.Name = "lblEmail";
             this.lblEmail.Size = new System.Drawing.Size(63, 30);
@@ -186,7 +186,7 @@
             // 
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Segoe UI Semibold", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(19, 224);
+            this.label9.Location = new System.Drawing.Point(19, 206);
             this.label9.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(65, 25);
@@ -197,7 +197,7 @@
             // 
             this.lblGender.AutoSize = true;
             this.lblGender.Font = new System.Drawing.Font("Segoe UI Semibold", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblGender.Location = new System.Drawing.Point(187, 181);
+            this.lblGender.Location = new System.Drawing.Point(187, 163);
             this.lblGender.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblGender.Name = "lblGender";
             this.lblGender.Size = new System.Drawing.Size(63, 30);
@@ -208,7 +208,7 @@
             // 
             this.label11.AutoSize = true;
             this.label11.Font = new System.Drawing.Font("Segoe UI Semibold", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.Location = new System.Drawing.Point(19, 184);
+            this.label11.Location = new System.Drawing.Point(19, 166);
             this.label11.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(80, 25);
@@ -219,7 +219,7 @@
             // 
             this.lblNationalNo.AutoSize = true;
             this.lblNationalNo.Font = new System.Drawing.Font("Segoe UI Semibold", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblNationalNo.Location = new System.Drawing.Point(187, 141);
+            this.lblNationalNo.Location = new System.Drawing.Point(187, 123);
             this.lblNationalNo.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblNationalNo.Name = "lblNationalNo";
             this.lblNationalNo.Size = new System.Drawing.Size(63, 30);
@@ -230,7 +230,7 @@
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Segoe UI Semibold", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(14, 144);
+            this.label5.Location = new System.Drawing.Point(14, 126);
             this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(122, 25);
@@ -243,7 +243,7 @@
             this.lblFullName.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.lblFullName.Font = new System.Drawing.Font("Segoe UI Semibold", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblFullName.ForeColor = System.Drawing.Color.Transparent;
-            this.lblFullName.Location = new System.Drawing.Point(187, 101);
+            this.lblFullName.Location = new System.Drawing.Point(187, 83);
             this.lblFullName.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblFullName.Name = "lblFullName";
             this.lblFullName.Size = new System.Drawing.Size(63, 30);
@@ -254,7 +254,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Segoe UI Semibold", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(14, 104);
+            this.label3.Location = new System.Drawing.Point(14, 86);
             this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(69, 25);
@@ -265,7 +265,7 @@
             // 
             this.lblPersonID.AutoSize = true;
             this.lblPersonID.Font = new System.Drawing.Font("Segoe UI Semibold", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblPersonID.Location = new System.Drawing.Point(187, 61);
+            this.lblPersonID.Location = new System.Drawing.Point(187, 43);
             this.lblPersonID.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblPersonID.Name = "lblPersonID";
             this.lblPersonID.Size = new System.Drawing.Size(63, 30);
@@ -276,7 +276,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Segoe UI Semibold", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(14, 64);
+            this.label1.Location = new System.Drawing.Point(14, 46);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(94, 25);
@@ -319,7 +319,7 @@
             this.groupBox1.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Padding = new System.Windows.Forms.Padding(4);
-            this.groupBox1.Size = new System.Drawing.Size(989, 327);
+            this.groupBox1.Size = new System.Drawing.Size(989, 290);
             this.groupBox1.TabIndex = 1;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Person Information";
@@ -329,7 +329,7 @@
             this.pbxPersonIMG.Image = global::DVLD_DivideAndConquer.Properties.Resources.UnKnown_Male;
             this.pbxPersonIMG.Location = new System.Drawing.Point(760, 61);
             this.pbxPersonIMG.Name = "pbxPersonIMG";
-            this.pbxPersonIMG.Size = new System.Drawing.Size(195, 229);
+            this.pbxPersonIMG.Size = new System.Drawing.Size(195, 212);
             this.pbxPersonIMG.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pbxPersonIMG.TabIndex = 32;
             this.pbxPersonIMG.TabStop = false;
@@ -337,7 +337,7 @@
             // pictureBox7
             // 
             this.pictureBox7.Image = global::DVLD_DivideAndConquer.Properties.Resources.calendar___32;
-            this.pictureBox7.Location = new System.Drawing.Point(498, 137);
+            this.pictureBox7.Location = new System.Drawing.Point(498, 119);
             this.pictureBox7.Margin = new System.Windows.Forms.Padding(4);
             this.pictureBox7.Name = "pictureBox7";
             this.pictureBox7.Size = new System.Drawing.Size(44, 38);
@@ -348,7 +348,7 @@
             // pictureBox8
             // 
             this.pictureBox8.Image = global::DVLD_DivideAndConquer.Properties.Resources.phone__32;
-            this.pictureBox8.Location = new System.Drawing.Point(498, 177);
+            this.pictureBox8.Location = new System.Drawing.Point(498, 159);
             this.pictureBox8.Margin = new System.Windows.Forms.Padding(4);
             this.pictureBox8.Name = "pictureBox8";
             this.pictureBox8.Size = new System.Drawing.Size(44, 38);
@@ -359,7 +359,7 @@
             // pictureBox9
             // 
             this.pictureBox9.Image = global::DVLD_DivideAndConquer.Properties.Resources.international_45;
-            this.pictureBox9.Location = new System.Drawing.Point(498, 217);
+            this.pictureBox9.Location = new System.Drawing.Point(498, 199);
             this.pictureBox9.Margin = new System.Windows.Forms.Padding(4);
             this.pictureBox9.Name = "pictureBox9";
             this.pictureBox9.Size = new System.Drawing.Size(44, 38);
@@ -370,7 +370,7 @@
             // pictureBox5
             // 
             this.pictureBox5.Image = global::DVLD_DivideAndConquer.Properties.Resources.home__32;
-            this.pictureBox5.Location = new System.Drawing.Point(135, 257);
+            this.pictureBox5.Location = new System.Drawing.Point(135, 239);
             this.pictureBox5.Margin = new System.Windows.Forms.Padding(4);
             this.pictureBox5.Name = "pictureBox5";
             this.pictureBox5.Size = new System.Drawing.Size(44, 38);
@@ -381,7 +381,7 @@
             // pictureBox6
             // 
             this.pictureBox6.Image = global::DVLD_DivideAndConquer.Properties.Resources.fullname___32;
-            this.pictureBox6.Location = new System.Drawing.Point(135, 97);
+            this.pictureBox6.Location = new System.Drawing.Point(135, 79);
             this.pictureBox6.Margin = new System.Windows.Forms.Padding(4);
             this.pictureBox6.Name = "pictureBox6";
             this.pictureBox6.Size = new System.Drawing.Size(44, 38);
@@ -392,7 +392,7 @@
             // pictureBox3
             // 
             this.pictureBox3.Image = global::DVLD_DivideAndConquer.Properties.Resources.national_no__32;
-            this.pictureBox3.Location = new System.Drawing.Point(135, 137);
+            this.pictureBox3.Location = new System.Drawing.Point(135, 119);
             this.pictureBox3.Margin = new System.Windows.Forms.Padding(4);
             this.pictureBox3.Name = "pictureBox3";
             this.pictureBox3.Size = new System.Drawing.Size(44, 38);
@@ -403,7 +403,7 @@
             // pictureBox4
             // 
             this.pictureBox4.Image = global::DVLD_DivideAndConquer.Properties.Resources.gender___32;
-            this.pictureBox4.Location = new System.Drawing.Point(135, 177);
+            this.pictureBox4.Location = new System.Drawing.Point(135, 159);
             this.pictureBox4.Margin = new System.Windows.Forms.Padding(4);
             this.pictureBox4.Name = "pictureBox4";
             this.pictureBox4.Size = new System.Drawing.Size(44, 38);
@@ -414,7 +414,7 @@
             // pictureBox2
             // 
             this.pictureBox2.Image = global::DVLD_DivideAndConquer.Properties.Resources.at__32;
-            this.pictureBox2.Location = new System.Drawing.Point(135, 217);
+            this.pictureBox2.Location = new System.Drawing.Point(135, 199);
             this.pictureBox2.Margin = new System.Windows.Forms.Padding(4);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(44, 38);
@@ -425,7 +425,7 @@
             // pictureBox1
             // 
             this.pictureBox1.Image = global::DVLD_DivideAndConquer.Properties.Resources.id_45;
-            this.pictureBox1.Location = new System.Drawing.Point(135, 57);
+            this.pictureBox1.Location = new System.Drawing.Point(135, 39);
             this.pictureBox1.Margin = new System.Windows.Forms.Padding(4);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(44, 38);
@@ -441,7 +441,7 @@
             this.Font = new System.Drawing.Font("Segoe UI Semibold", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
             this.Name = "ctrlPersonCard";
-            this.Size = new System.Drawing.Size(1005, 339);
+            this.Size = new System.Drawing.Size(1005, 307);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbxPersonIMG)).EndInit();

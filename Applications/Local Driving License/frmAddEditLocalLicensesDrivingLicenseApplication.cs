@@ -102,7 +102,31 @@ namespace DVLD_DivideAndConquer.Applications.Local_Driving_License
 
         private void btnNext_Click(object sender, EventArgs e)
         {
-            tcLocalApplicationInfo.SelectedTab = tcLocalApplicationInfo.TabPages["tpApplicationInfo"];
+
+            if (_Mode == enMode.Update)
+            {
+                btnSave.Enabled = true;
+                tpApplicationInfo.Enabled = true;
+                tcLocalApplicationInfo.SelectedTab = tcLocalApplicationInfo.TabPages["tpPersonalInfo"];
+                return;
+            }
+
+            if (ctrlPersonCardWithFilter1.PersonID != -1)
+            {
+
+                btnSave.Enabled = true;
+                tpApplicationInfo.Enabled = true;
+                tcLocalApplicationInfo.SelectedTab = tcLocalApplicationInfo.TabPages["tpApplicationInfo"];
+
+            }
+
+            else
+
+            {
+                MessageBox.Show("Please Select a Person", "Select a Person", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                ctrlPersonCardWithFilter1.FilterFocus();
+            }
+
         }
 
         private void btnCancel_Click(object sender, EventArgs e)
