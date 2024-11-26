@@ -174,6 +174,18 @@ namespace DVLD_Business
             return clsLicenseData.DeactivateLicense(this.LicenseID);
         }
 
+        public int Detain(float FineFees, int CreatedByUserID)
+        {
+            clsDetain DetainedLicense = new clsDetain();
+            DetainedLicense.LicenseID= this.LicenseID;
+            DetainedLicense.DetainDate = DateTime.Now;
+            DetainedLicense.FineFees = Convert.ToSingle(FineFees);
+            DetainedLicense.CreatedByUserID = CreatedByUserID;
+            if (!DetainedLicense.Save())
+                return -1;
+            else
+                return DetainedLicense.DetainID;
+        }
         //public static int GetAvtiveLicenseID()
         //{
         //    return clsLicense.GetActiveLicenseIDByPersonID(CallConvT)

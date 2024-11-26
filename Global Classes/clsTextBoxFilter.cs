@@ -10,7 +10,7 @@ namespace DVDL_V0._01.Global_Classes
 {
     internal class clsTextBoxFilter
     {
-        public static bool ValidateEmptyTextBox(object sender, CancelEventArgs e)
+        public static bool TextBoxIsNullOrEmpty(object sender, CancelEventArgs e)
         {
 
             

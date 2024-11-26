@@ -34,6 +34,7 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.chkShowPassword = new System.Windows.Forms.CheckBox();
             this.btnClear = new System.Windows.Forms.Button();
             this.btnLogin = new System.Windows.Forms.Button();
             this.chkRememberMe = new System.Windows.Forms.CheckBox();
@@ -45,7 +46,6 @@
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.btnClose = new System.Windows.Forms.Button();
             this.txtUsername = new System.Windows.Forms.TextBox();
-            this.chkShowPassword = new System.Windows.Forms.CheckBox();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
@@ -148,6 +148,18 @@
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
             // 
+            // chkShowPassword
+            // 
+            this.chkShowPassword.AutoSize = true;
+            this.chkShowPassword.Font = new System.Drawing.Font("Segoe UI Semibold", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.chkShowPassword.Location = new System.Drawing.Point(264, 234);
+            this.chkShowPassword.Name = "chkShowPassword";
+            this.chkShowPassword.Size = new System.Drawing.Size(161, 29);
+            this.chkShowPassword.TabIndex = 13;
+            this.chkShowPassword.Text = "Show Password";
+            this.chkShowPassword.UseVisualStyleBackColor = true;
+            this.chkShowPassword.CheckedChanged += new System.EventHandler(this.chkShowPassword_CheckedChanged);
+            // 
             // btnClear
             // 
             this.btnClear.DialogResult = System.Windows.Forms.DialogResult.Cancel;
@@ -187,7 +199,6 @@
             this.chkRememberMe.TabIndex = 3;
             this.chkRememberMe.Text = "Remember Me";
             this.chkRememberMe.UseVisualStyleBackColor = true;
-
             // 
             // label7
             // 
@@ -221,6 +232,7 @@
             // 
             // txtPassword
             // 
+            this.txtPassword.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtPassword.Location = new System.Drawing.Point(203, 195);
             this.txtPassword.Name = "txtPassword";
             this.txtPassword.PasswordChar = '*';
@@ -263,22 +275,11 @@
             // 
             // txtUsername
             // 
+            this.txtUsername.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtUsername.Location = new System.Drawing.Point(203, 160);
             this.txtUsername.Name = "txtUsername";
             this.txtUsername.Size = new System.Drawing.Size(222, 33);
             this.txtUsername.TabIndex = 1;
-            // 
-            // chkShowPassword
-            // 
-            this.chkShowPassword.AutoSize = true;
-            this.chkShowPassword.Font = new System.Drawing.Font("Segoe UI Semibold", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.chkShowPassword.Location = new System.Drawing.Point(264, 234);
-            this.chkShowPassword.Name = "chkShowPassword";
-            this.chkShowPassword.Size = new System.Drawing.Size(161, 29);
-            this.chkShowPassword.TabIndex = 13;
-            this.chkShowPassword.Text = "Show Password";
-            this.chkShowPassword.UseVisualStyleBackColor = true;
-            this.chkShowPassword.CheckedChanged += new System.EventHandler(this.chkShowPassword_CheckedChanged);
             // 
             // frmLogIn
             // 

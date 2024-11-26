@@ -171,7 +171,7 @@ namespace DVLD_DivideAndConquer.User
                 {
                     lblTitle.BackColor = Color.Salmon;
                     lblTitle.Text += "  == Already a User ==";
-                    MessageBox.Show("Selected Person already has a user, choose another one.", "Select another Person", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MessageBox.Show("Selected Person already is a user, choose another one.", "Select another Person", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     ctrlPersonCardWithFilter1.FilterFocus();
 
                 }

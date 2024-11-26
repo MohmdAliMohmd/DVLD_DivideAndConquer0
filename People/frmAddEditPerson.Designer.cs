@@ -191,6 +191,7 @@
             // 
             // txtAddress
             // 
+            this.txtAddress.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtAddress.Font = new System.Drawing.Font("Segoe UI Semibold", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtAddress.Location = new System.Drawing.Point(180, 264);
             this.txtAddress.Multiline = true;
@@ -211,6 +212,7 @@
             // 
             // txtPhone
             // 
+            this.txtPhone.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtPhone.Font = new System.Drawing.Font("Segoe UI Semibold", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtPhone.Location = new System.Drawing.Point(756, 184);
             this.txtPhone.Name = "txtPhone";
@@ -225,6 +227,7 @@
             // 
             // txtNationalNo
             // 
+            this.txtNationalNo.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtNationalNo.Font = new System.Drawing.Font("Segoe UI Semibold", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtNationalNo.Location = new System.Drawing.Point(180, 144);
             this.txtNationalNo.Name = "txtNationalNo";
@@ -234,6 +237,7 @@
             // 
             // txtLastName
             // 
+            this.txtLastName.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtLastName.Font = new System.Drawing.Font("Segoe UI Semibold", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtLastName.Location = new System.Drawing.Point(756, 103);
             this.txtLastName.Name = "txtLastName";
@@ -244,6 +248,7 @@
             // 
             // txtThirdName
             // 
+            this.txtThirdName.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtThirdName.Font = new System.Drawing.Font("Segoe UI Semibold", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtThirdName.Location = new System.Drawing.Point(564, 103);
             this.txtThirdName.Name = "txtThirdName";
@@ -253,6 +258,7 @@
             // 
             // txtSecondName
             // 
+            this.txtSecondName.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtSecondName.Font = new System.Drawing.Font("Segoe UI Semibold", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtSecondName.Location = new System.Drawing.Point(372, 103);
             this.txtSecondName.Name = "txtSecondName";
@@ -263,6 +269,7 @@
             // 
             // txtFirstName
             // 
+            this.txtFirstName.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtFirstName.Font = new System.Drawing.Font("Segoe UI Semibold", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtFirstName.Location = new System.Drawing.Point(180, 103);
             this.txtFirstName.Name = "txtFirstName";
@@ -432,6 +439,7 @@
             // 
             // txtEmail
             // 
+            this.txtEmail.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtEmail.Font = new System.Drawing.Font("Segoe UI Semibold", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtEmail.Location = new System.Drawing.Point(180, 224);
             this.txtEmail.Name = "txtEmail";

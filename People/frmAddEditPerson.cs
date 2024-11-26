@@ -219,7 +219,7 @@ namespace DVLD_DivideAndConquer.People
         private void txtFirstName_Validating(object sender, CancelEventArgs e)
         {
 
-            if (clsTextBoxFilter.ValidateEmptyTextBox(sender, e))
+            if (clsTextBoxFilter.TextBoxIsNullOrEmpty(sender, e))
                 errorProvider1.SetError((TextBox)sender, "This field is required!");
             else
                 errorProvider1.SetError((TextBox)sender, null);
@@ -321,7 +321,7 @@ namespace DVLD_DivideAndConquer.People
 
         private void txtNationalNo_Validating(object sender, CancelEventArgs e)
         {
-            if(clsTextBoxFilter.ValidateEmptyTextBox(sender,e))
+            if(clsTextBoxFilter.TextBoxIsNullOrEmpty(sender,e))
             {
                 errorProvider1.SetError((TextBox)sender, "This field is required!");
             }
@@ -340,7 +340,7 @@ namespace DVLD_DivideAndConquer.People
 
         private void txtPhone_Validating(object sender, CancelEventArgs e)
         {
-            if (clsTextBoxFilter.ValidateEmptyTextBox(sender, e))
+            if (clsTextBoxFilter.TextBoxIsNullOrEmpty(sender, e))
             {
                 errorProvider1.SetError((TextBox)sender, "This field is required!");
             }

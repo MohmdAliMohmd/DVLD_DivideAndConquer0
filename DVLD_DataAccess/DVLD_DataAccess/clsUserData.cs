@@ -11,41 +11,41 @@ namespace DVLD_DataAccess
             bool isFound = false;
             string query = "SELECT * FROM Users WHERE UserID = @UserID";
             try
-            { 
-              using (SqlConnection connection = new SqlConnection(clsDataAccessSettings.ConnectionString))
-                 {         
-                using(SqlCommand command = new SqlCommand(query, connection))
+            {
+                using (SqlConnection connection = new SqlConnection(clsDataAccessSettings.ConnectionString))
+                {
+                    using (SqlCommand command = new SqlCommand(query, connection))
                     {
-                    command.Parameters.AddWithValue("@UserID", UserID);        
-                    connection.Open();
-                     using (SqlDataReader reader = command.ExecuteReader())      
-                          {
-        
-                        if(reader.Read())
+                        command.Parameters.AddWithValue("@UserID", UserID);
+                        connection.Open();
+                        using (SqlDataReader reader = command.ExecuteReader())
                         {
-                            isFound = true;
-        
-                    PersonID = (int)reader["PersonID"];
-                    UserName = (string)reader["UserName"];
-                    Password = (string)reader["Password"];
-                    IsActive = (bool)reader["IsActive"];
-                         }
-                        else
-                         {
-                            isFound = false;
-                         }
 
-                  }
+                            if (reader.Read())
+                            {
+                                isFound = true;
+
+                                PersonID = (int)reader["PersonID"];
+                                UserName = (string)reader["UserName"];
+                                Password = (string)reader["Password"];
+                                IsActive = (bool)reader["IsActive"];
+                            }
+                            else
+                            {
+                                isFound = false;
+                            }
+
+                        }
+                    }
                 }
-              }
             }
-            catch(Exception ex)
+            catch (Exception ex)
             {
                 isFound = false;
             }
             finally
             {
-               
+
             }
 
             return isFound;
@@ -53,35 +53,36 @@ namespace DVLD_DataAccess
         public static int AddNewUser(int PersonID, string UserName, string Password, bool IsActive)
         {
             int UserID = -1;
-             string query = @"INSERT INTO Users (PersonID, UserName, Password, IsActive)
+            string query = @"INSERT INTO Users (PersonID, UserName, Password, IsActive)
                             VALUES (@PersonID, @UserName, @Password, @IsActive)
                             SELECT SCOPE_IDENTITY();";
-        try{
-             using( SqlConnection connection = new SqlConnection(clsDataAccessSettings.ConnectionString))
-                {       
-                   using (SqlCommand command = new SqlCommand(query, connection))
+            try
+            {
+                using (SqlConnection connection = new SqlConnection(clsDataAccessSettings.ConnectionString))
+                {
+                    using (SqlCommand command = new SqlCommand(query, connection))
                     {
 
-            command.Parameters.AddWithValue("@PersonID", PersonID);
-            command.Parameters.AddWithValue("@UserName", UserName);
-            command.Parameters.AddWithValue("@Password", Password);
-            command.Parameters.AddWithValue("@IsActive", IsActive);
+                        command.Parameters.AddWithValue("@PersonID", PersonID);
+                        command.Parameters.AddWithValue("@UserName", UserName);
+                        command.Parameters.AddWithValue("@Password", Password);
+                        command.Parameters.AddWithValue("@IsActive", IsActive);
                         connection.Open();
                         object result = command.ExecuteScalar();
-                        if(result != null && int.TryParse(result.ToString(), out int insertedID))
-                      {
-                    UserID = insertedID;
-                       }
+                        if (result != null && int.TryParse(result.ToString(), out int insertedID))
+                        {
+                            UserID = insertedID;
+                        }
                     }
-                 }
+                }
             }
-            catch(Exception ex)
+            catch (Exception ex)
             {
 
             }
             finally
             {
-               
+
             }
 
             return UserID;
@@ -96,30 +97,31 @@ namespace DVLD_DataAccess
                             Password = @Password, 
                             IsActive = @IsActive
                             WHERE UserID = @UserID";
-            try{
-                   using(SqlConnection connection = new SqlConnection(clsDataAccessSettings.ConnectionString))
+            try
+            {
+                using (SqlConnection connection = new SqlConnection(clsDataAccessSettings.ConnectionString))
+                {
+                    using (SqlCommand command = new SqlCommand(query, connection))
                     {
-                        using(SqlCommand command = new SqlCommand(query, connection))
-                        {
 
-            command.Parameters.AddWithValue("@UserID", UserID);
-            command.Parameters.AddWithValue("@PersonID", PersonID);
-            command.Parameters.AddWithValue("@UserName", UserName);
-            command.Parameters.AddWithValue("@Password", Password);
-            command.Parameters.AddWithValue("@IsActive", IsActive);
-                            connection.Open();
-                            rowsAffected = command.ExecuteNonQuery();
-                         }
-                      }
+                        command.Parameters.AddWithValue("@UserID", UserID);
+                        command.Parameters.AddWithValue("@PersonID", PersonID);
+                        command.Parameters.AddWithValue("@UserName", UserName);
+                        command.Parameters.AddWithValue("@Password", Password);
+                        command.Parameters.AddWithValue("@IsActive", IsActive);
+                        connection.Open();
+                        rowsAffected = command.ExecuteNonQuery();
+                    }
                 }
-            catch(Exception ex)
+            }
+            catch (Exception ex)
             {
                 return false;
             }
 
             finally
             {
-                
+
             }
 
             return (rowsAffected > 0);
@@ -129,57 +131,30 @@ namespace DVLD_DataAccess
             int rowsAffected = 0;
             string query = @"Delete Users 
                                 where UserID = @UserID";
-            try{
-                 using (SqlConnection connection = new SqlConnection(clsDataAccessSettings.ConnectionString))
+            try
+            {
+                using (SqlConnection connection = new SqlConnection(clsDataAccessSettings.ConnectionString))
+                {
+                    using (SqlCommand command = new SqlCommand(query, connection))
                     {
-                        using(SqlCommand command = new SqlCommand(query, connection))
-                        {
-                            command.Parameters.AddWithValue("@UserID", UserID);
-                            connection.Open();
-                            rowsAffected = command.ExecuteNonQuery();
-                         }            
+                        command.Parameters.AddWithValue("@UserID", UserID);
+                        connection.Open();
+                        rowsAffected = command.ExecuteNonQuery();
                     }
-                 }
-                catch(Exception ex)
-                {
                 }
-                finally
-                {
-                
-                }
+            }
+            catch (Exception ex)
+            {
+            }
+            finally
+            {
+
+            }
             return (rowsAffected > 0);
         }
 
-        
-        public static bool IsUserExist(int UserID)
-        {
-            bool isFound = false;
-            string query = "SELECT Found=1 FROM Users WHERE UserID = @UserID";
-            try{
-                    using (SqlConnection connection = new SqlConnection(clsDataAccessSettings.ConnectionString))
-                       {
-                            using(SqlCommand command = new SqlCommand(query, connection))
-                            {
-                                command.Parameters.AddWithValue("@UserID", UserID);
-                                connection.Open();
-                                using(SqlDataReader reader = command.ExecuteReader())
-                                    {
-                                        isFound = reader.HasRows;
-                                    }
-                              }
-                        }
-                }
-                 catch(Exception ex)
-                {
-                  isFound = false;
-                 }
-            finally
-            {
-               
-            }
 
-            return isFound;
-        }
+    
         public static DataTable GetAllUsers()
         {
             DataTable dt = new DataTable();
@@ -191,28 +166,28 @@ namespace DVLD_DataAccess
 
             try
             {
-                    using(SqlConnection connection = new SqlConnection(clsDataAccessSettings.ConnectionString))
+                using (SqlConnection connection = new SqlConnection(clsDataAccessSettings.ConnectionString))
+                {
+                    using (SqlCommand command = new SqlCommand(query, connection))
                     {
-                        using(SqlCommand command = new SqlCommand(query, connection))
+                        connection.Open();
+                        using (SqlDataReader reader = command.ExecuteReader())
                         {
-                            connection.Open();
-                            using(SqlDataReader reader = command.ExecuteReader())
-                                {
-                                    if(reader.HasRows)
-                                {
-                                    dt.Load(reader);
-                                }
-                          }
-                     }  
-                   }
-             }
-            catch(Exception ex)
+                            if (reader.HasRows)
+                            {
+                                dt.Load(reader);
+                            }
+                        }
+                    }
+                }
+            }
+            catch (Exception ex)
             {
 
             }
             finally
             {
-                
+
             }
 
             return dt;
@@ -318,7 +293,36 @@ namespace DVLD_DataAccess
             return isFound;
         }
 
-      
+        public static bool IsUserExist(int UserID)
+        {
+            bool isFound = false;
+            string query = "SELECT Found=1 FROM Users WHERE UserID = @UserID";
+            try
+            {
+                using (SqlConnection connection = new SqlConnection(clsDataAccessSettings.ConnectionString))
+                {
+                    using (SqlCommand command = new SqlCommand(query, connection))
+                    {
+                        command.Parameters.AddWithValue("@UserID", UserID);
+                        connection.Open();
+                        using (SqlDataReader reader = command.ExecuteReader())
+                        {
+                            isFound = reader.HasRows;
+                        }
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                isFound = false;
+            }
+            finally
+            {
+
+            }
+
+            return isFound;
+        }
 
         public static bool IsUserExist(string UserName)
         {

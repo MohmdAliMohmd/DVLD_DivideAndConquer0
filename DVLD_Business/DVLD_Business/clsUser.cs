@@ -10,6 +10,7 @@ namespace DVLD_Business
         public enMode Mode = enMode.AddNew;
         public int UserID { set; get; }
         public int PersonID { set; get; }
+        public clsPerson PersonInfo { set; get; }
         public string UserName { set; get; }
         public string Password { set; get; }
         public bool IsActive { set; get; }
@@ -30,6 +31,7 @@ namespace DVLD_Business
             this.UserName = UserName;
             this.Password = Password;
             this.IsActive = IsActive;
+            this.PersonInfo = clsPerson.Find(this.PersonID);
             Mode = enMode.Update;
         }
         private bool _AddNewUser()

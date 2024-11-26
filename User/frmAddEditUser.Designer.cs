@@ -33,6 +33,7 @@
             this.lblTitle = new System.Windows.Forms.Label();
             this.tcUserInfo = new System.Windows.Forms.TabControl();
             this.tpPersonalInfo = new System.Windows.Forms.TabPage();
+            this.btnNext = new System.Windows.Forms.Button();
             this.ctrlPersonCardWithFilter1 = new DVLD_DivideAndConquer.People.Controls.ctrlPersonCardWithFilter();
             this.tpLogInInfo = new System.Windows.Forms.TabPage();
             this.btnCancel = new System.Windows.Forms.Button();
@@ -47,21 +48,20 @@
             this.txtPassword = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.txtUsername = new System.Windows.Forms.TextBox();
-            this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
-            this.btnNext = new System.Windows.Forms.Button();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
             this.btnClose = new System.Windows.Forms.Button();
             this.tcUserInfo.SuspendLayout();
             this.tpPersonalInfo.SuspendLayout();
             this.tpLogInInfo.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             this.SuspendLayout();
             // 
             // button1
@@ -106,6 +106,21 @@
             this.tpPersonalInfo.TabIndex = 0;
             this.tpPersonalInfo.Text = "Personal Info";
             this.tpPersonalInfo.UseVisualStyleBackColor = true;
+            // 
+            // btnNext
+            // 
+            this.btnNext.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
+            this.btnNext.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnNext.Image = global::DVLD_DivideAndConquer.Properties.Resources.Next50;
+            this.btnNext.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnNext.Location = new System.Drawing.Point(853, 431);
+            this.btnNext.Name = "btnNext";
+            this.btnNext.Size = new System.Drawing.Size(148, 43);
+            this.btnNext.TabIndex = 3;
+            this.btnNext.Text = "Next";
+            this.btnNext.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnNext.UseVisualStyleBackColor = false;
+            this.btnNext.Click += new System.EventHandler(this.btnNext_Click);
             // 
             // ctrlPersonCardWithFilter1
             // 
@@ -213,6 +228,7 @@
             // 
             // txtConfirmPW
             // 
+            this.txtConfirmPW.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtConfirmPW.Location = new System.Drawing.Point(470, 268);
             this.txtConfirmPW.Name = "txtConfirmPW";
             this.txtConfirmPW.PasswordChar = '*';
@@ -257,6 +273,7 @@
             // 
             // txtPassword
             // 
+            this.txtPassword.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtPassword.Location = new System.Drawing.Point(470, 231);
             this.txtPassword.Name = "txtPassword";
             this.txtPassword.PasswordChar = '*';
@@ -278,31 +295,13 @@
             // 
             // txtUsername
             // 
+            this.txtUsername.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtUsername.Location = new System.Drawing.Point(470, 194);
             this.txtUsername.Name = "txtUsername";
             this.txtUsername.Size = new System.Drawing.Size(222, 33);
             this.txtUsername.TabIndex = 3;
             this.txtUsername.TextChanged += new System.EventHandler(this.txtUsername_TextChanged);
             this.txtUsername.Validating += new System.ComponentModel.CancelEventHandler(this.txtUsername_Validating);
-            // 
-            // errorProvider1
-            // 
-            this.errorProvider1.ContainerControl = this;
-            // 
-            // btnNext
-            // 
-            this.btnNext.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
-            this.btnNext.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnNext.Image = global::DVLD_DivideAndConquer.Properties.Resources.Next50;
-            this.btnNext.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnNext.Location = new System.Drawing.Point(853, 431);
-            this.btnNext.Name = "btnNext";
-            this.btnNext.Size = new System.Drawing.Size(148, 43);
-            this.btnNext.TabIndex = 3;
-            this.btnNext.Text = "Next";
-            this.btnNext.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnNext.UseVisualStyleBackColor = false;
-            this.btnNext.Click += new System.EventHandler(this.btnNext_Click);
             // 
             // pictureBox4
             // 
@@ -345,6 +344,10 @@
             this.pictureBox2.TabIndex = 17;
             this.pictureBox2.TabStop = false;
             // 
+            // errorProvider1
+            // 
+            this.errorProvider1.ContainerControl = this;
+            // 
             // btnClose
             // 
             this.btnClose.BackColor = System.Drawing.Color.White;
@@ -379,11 +382,11 @@
             this.tpPersonalInfo.ResumeLayout(false);
             this.tpLogInInfo.ResumeLayout(false);
             this.tpLogInInfo.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
             this.ResumeLayout(false);
 
         }

@@ -29,7 +29,8 @@ namespace DVLD_DivideAndConquer
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new frmLogIn());
             //Application.Run(new frmShowPersonLicenseHistory(-1));
-            Application.Run(new frmDetainLicenseApplication());
+           // Application.Run(new frmDetainLicenseApplication());
+            
             //Application.Run(new frmAddEditUser());
             //Application.Run(new frmChangePassword(1));
             //Application.Run(new frmPeopleList());

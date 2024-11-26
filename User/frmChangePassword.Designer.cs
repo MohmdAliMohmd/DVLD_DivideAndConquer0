@@ -106,6 +106,7 @@
             // 
             // txtConfirmPW
             // 
+            this.txtConfirmPW.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtConfirmPW.Location = new System.Drawing.Point(496, 584);
             this.txtConfirmPW.Name = "txtConfirmPW";
             this.txtConfirmPW.PasswordChar = '*';
@@ -127,6 +128,7 @@
             // 
             // txtNewPassword
             // 
+            this.txtNewPassword.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtNewPassword.Location = new System.Drawing.Point(496, 547);
             this.txtNewPassword.Name = "txtNewPassword";
             this.txtNewPassword.PasswordChar = '*';
@@ -148,6 +150,7 @@
             // 
             // txtCurrentPW
             // 
+            this.txtCurrentPW.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtCurrentPW.Location = new System.Drawing.Point(496, 510);
             this.txtCurrentPW.Name = "txtCurrentPW";
             this.txtCurrentPW.Size = new System.Drawing.Size(222, 33);
