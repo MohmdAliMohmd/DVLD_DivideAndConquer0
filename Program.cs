@@ -3,6 +3,7 @@ using DVLD_DivideAndConquer.Applications.ApplicationTypes;
 using DVLD_DivideAndConquer.Applications.Local_Driving_License;
 using DVLD_DivideAndConquer.Drivers;
 using DVLD_DivideAndConquer.Licenses;
+using DVLD_DivideAndConquer.Licenses.Detain_License;
 using DVLD_DivideAndConquer.People;
 using DVLD_DivideAndConquer.Tests;
 using DVLD_DivideAndConquer.Tests.Test_Types;
@@ -27,7 +28,8 @@ namespace DVLD_DivideAndConquer
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new frmLogIn());
-            Application.Run(new frmShowPersonLicenseHistory(-1));
+            //Application.Run(new frmShowPersonLicenseHistory(-1));
+            Application.Run(new frmDetainLicenseApplication());
             //Application.Run(new frmAddEditUser());
             //Application.Run(new frmChangePassword(1));
             //Application.Run(new frmPeopleList());

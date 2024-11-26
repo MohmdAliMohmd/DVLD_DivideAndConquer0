@@ -16,5 +16,10 @@ namespace DVLD_DivideAndConquer.Licenses.Detain_License
         {
             InitializeComponent();
         }
+
+        private void btnClose_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }
