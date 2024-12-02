@@ -19,7 +19,7 @@ namespace DVLD_DivideAndConquer.Licenses.Controls
         private int _DriverID;
         private clsDriver _Driver;
         private DataTable _dtDriverLocalLicensesHistory;
-        private DataTable _dtDriverInternationalLicensesHistory;
+        private DataTable _dtDriverInternaionalLicensesHistory;
         public ctrlDriverLicenses()
         {
             InitializeComponent();
@@ -35,12 +35,12 @@ namespace DVLD_DivideAndConquer.Licenses.Controls
             clsGlobal.DataGridView_CellMouseMove(sender, e);
         }
 
-        private void dgvInternationalLicensesHistory_CellMouseMove(object sender, DataGridViewCellMouseEventArgs e)
+        private void dgvInternaionalLicensesHistory_CellMouseMove(object sender, DataGridViewCellMouseEventArgs e)
         {
             clsGlobal.DataGridView_CellMouseMove(sender, e);
         }
 
-        private void dgvInternationalLicensesHistory_CellMouseLeave(object sender, DataGridViewCellEventArgs e)
+        private void dgvInternaionalLicensesHistory_CellMouseLeave(object sender, DataGridViewCellEventArgs e)
         {
             clsGlobal.DataGridView_CellMouseLeave(sender, e);
         }
@@ -67,9 +67,11 @@ namespace DVLD_DivideAndConquer.Licenses.Controls
 
                 dgvLocalLicensesHistory.Columns[3].HeaderText = "Issue Date";
                 dgvLocalLicensesHistory.Columns[3].Width = 170;
+                dgvLocalLicensesHistory.Columns[3].DefaultCellStyle.Format = "dd/MM/yyyy"; 
 
                 dgvLocalLicensesHistory.Columns[4].HeaderText = "Expiration Date";
                 dgvLocalLicensesHistory.Columns[4].Width = 170;
+                dgvLocalLicensesHistory.Columns[4].DefaultCellStyle.Format = "dd/MM/yyyy";
 
                 dgvLocalLicensesHistory.Columns[5].HeaderText = "Is Active";
                 dgvLocalLicensesHistory.Columns[5].Width = 110;
@@ -77,34 +79,36 @@ namespace DVLD_DivideAndConquer.Licenses.Controls
             }
         }
 
-        private void _LoadInternationalLicenseInfo()
+        private void _LoadInternaionalLicenseInfo()
         {
 
-            _dtDriverInternationalLicensesHistory = clsDriver.GetInternationalLicenses(_DriverID);
+            _dtDriverInternaionalLicensesHistory = clsDriver.GetInternationalLicenses(_DriverID);
 
 
-            dgvInternationalLicensesHistory.DataSource = _dtDriverInternationalLicensesHistory;
-            lblInternationalLicensesRecords.Text = dgvInternationalLicensesHistory.Rows.Count.ToString();
+            dgvInternaionalLicensesHistory.DataSource = _dtDriverInternaionalLicensesHistory;
+            lblInternaionalLicensesRecords.Text = dgvInternaionalLicensesHistory.Rows.Count.ToString();
 
-            if (dgvInternationalLicensesHistory.Rows.Count > 0)
+            if (dgvInternaionalLicensesHistory.Rows.Count > 0)
             {
-                dgvInternationalLicensesHistory.Columns[0].HeaderText = "Int.License ID";
-                dgvInternationalLicensesHistory.Columns[0].Width = 160;
+                dgvInternaionalLicensesHistory.Columns[0].HeaderText = "Int.License ID";
+                dgvInternaionalLicensesHistory.Columns[0].Width = 160;
 
-                dgvInternationalLicensesHistory.Columns[1].HeaderText = "Application ID";
-                dgvInternationalLicensesHistory.Columns[1].Width = 130;
+                dgvInternaionalLicensesHistory.Columns[1].HeaderText = "Application ID";
+                dgvInternaionalLicensesHistory.Columns[1].Width = 130;
 
-                dgvInternationalLicensesHistory.Columns[2].HeaderText = "L.License ID";
-                dgvInternationalLicensesHistory.Columns[2].Width = 130;
+                dgvInternaionalLicensesHistory.Columns[2].HeaderText = "L.License ID";
+                dgvInternaionalLicensesHistory.Columns[2].Width = 130;
 
-                dgvInternationalLicensesHistory.Columns[3].HeaderText = "Issue Date";
-                dgvInternationalLicensesHistory.Columns[3].Width = 180;
+                dgvInternaionalLicensesHistory.Columns[3].HeaderText = "Issue Date";
+                dgvInternaionalLicensesHistory.Columns[3].Width = 180;
+                dgvInternaionalLicensesHistory.Columns[3].DefaultCellStyle.Format = "dd/MM/yyyy";
 
-                dgvInternationalLicensesHistory.Columns[4].HeaderText = "Expiration Date";
-                dgvInternationalLicensesHistory.Columns[4].Width = 180;
+                dgvInternaionalLicensesHistory.Columns[4].HeaderText = "Expiration Date";
+                dgvInternaionalLicensesHistory.Columns[4].Width = 180;
+                dgvInternaionalLicensesHistory.Columns[4].DefaultCellStyle.Format = "dd/MM/yyyy";
 
-                dgvInternationalLicensesHistory.Columns[5].HeaderText = "Is Active";
-                dgvInternationalLicensesHistory.Columns[5].Width = 120;
+                dgvInternaionalLicensesHistory.Columns[5].HeaderText = "Is Active";
+                dgvInternaionalLicensesHistory.Columns[5].Width = 120;
 
             }
         }
@@ -115,7 +119,7 @@ namespace DVLD_DivideAndConquer.Licenses.Controls
             _Driver = clsDriver.FindByDriverID(_DriverID);
 
             _LoadLocalLicenseInfo();
-            _LoadInternationalLicenseInfo();
+            _LoadInternaionalLicenseInfo();
 
         }
 
@@ -127,7 +131,7 @@ namespace DVLD_DivideAndConquer.Licenses.Controls
                 _DriverID = _Driver.DriverID;
             }
             _LoadLocalLicenseInfo();
-            _LoadInternationalLicenseInfo();
+            _LoadInternaionalLicenseInfo();
         }
 
         private void showLicenseInfoToolStripMenuItem_Click(object sender, EventArgs e)
@@ -137,17 +141,17 @@ namespace DVLD_DivideAndConquer.Licenses.Controls
             frm.ShowDialog();
         }
 
-        private void InternationalLicenseHistorytoolStripMenuItem_Click(object sender, EventArgs e)
+        private void InternaionalLicenseHistorytoolStripMenuItem_Click(object sender, EventArgs e)
         {
-            int InternationalLicenseID = (int)dgvInternationalLicensesHistory.CurrentRow.Cells[0].Value;
-            frmShowInternationalLicenseInfo frm = new frmShowInternationalLicenseInfo(InternationalLicenseID);
+            int InternaionalLicenseID = (int)dgvInternaionalLicensesHistory.CurrentRow.Cells[0].Value;
+            frmShowInternationalLicenseInfo frm = new frmShowInternationalLicenseInfo(InternaionalLicenseID);
             frm.ShowDialog();
         }
 
         public void Clear()
         {
             _dtDriverLocalLicensesHistory.Clear();
-            _dtDriverInternationalLicensesHistory.Clear();
+            _dtDriverInternaionalLicensesHistory.Clear();
         }
 
     }

@@ -483,9 +483,9 @@ namespace DVLD_DivideAndConquer.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap international_32 {
+        internal static System.Drawing.Bitmap International_32 {
             get {
-                object obj = ResourceManager.GetObject("international 32", resourceCulture);
+                object obj = ResourceManager.GetObject("International 32", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -493,9 +493,9 @@ namespace DVLD_DivideAndConquer.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap international_45 {
+        internal static System.Drawing.Bitmap International_45 {
             get {
-                object obj = ResourceManager.GetObject("international-45", resourceCulture);
+                object obj = ResourceManager.GetObject("International-45", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

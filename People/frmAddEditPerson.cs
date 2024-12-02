@@ -1,17 +1,13 @@
-﻿using DVLD_Business;
-using DVLD_DivideAndConquer.Properties;
-using System;
-using System.Collections.Generic;
+﻿using System;
 using System.ComponentModel;
 using System.Data;
-using System.IO;
 using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using System.IO;
 using System.Windows.Forms;
-using DVDL_V0._01.Global_Classes;
 using DVDL_Classes;
+using DVDL_V0._01.Global_Classes;
+using DVLD_Business;
+using DVLD_DivideAndConquer.Properties;
 
 namespace DVLD_DivideAndConquer.People
 {
@@ -214,7 +210,7 @@ namespace DVLD_DivideAndConquer.People
             clsTextBoxFilter.txtBoxAcceptOnlyDigits_KeyPress(sender, e);
         }
 
-       
+
 
         private void txtFirstName_Validating(object sender, CancelEventArgs e)
         {
@@ -305,8 +301,8 @@ namespace DVLD_DivideAndConquer.People
                 e.Cancel = true;
                 errorProvider1.SetError((TextBox)sender, "This isn't a valid Email");
             }
-            else 
-                    errorProvider1.SetError((TextBox)sender, null);
+            else
+                errorProvider1.SetError((TextBox)sender, null);
 
             if (txtEmail.Text.Trim() != _Person.Email && clsPerson.IsPersonExistByEmail(txtEmail.Text.Trim()))
             {
@@ -321,15 +317,15 @@ namespace DVLD_DivideAndConquer.People
 
         private void txtNationalNo_Validating(object sender, CancelEventArgs e)
         {
-            if(clsTextBoxFilter.TextBoxIsNullOrEmpty(sender,e))
+            if (clsTextBoxFilter.TextBoxIsNullOrEmpty(sender, e))
             {
                 errorProvider1.SetError((TextBox)sender, "This field is required!");
             }
             else
                 errorProvider1.SetError((TextBox)sender, null);
 
-            if(txtNationalNo.Text.Trim()!= _Person.NationalNo && clsPerson.IsPersonExist(txtNationalNo.Text.Trim()))
-                {
+            if (txtNationalNo.Text.Trim() != _Person.NationalNo && clsPerson.IsPersonExist(txtNationalNo.Text.Trim()))
+            {
                 txtNationalNo.Focus();
                 e.Cancel = true;
                 errorProvider1.SetError((TextBox)sender, "National Number is used for another person!");

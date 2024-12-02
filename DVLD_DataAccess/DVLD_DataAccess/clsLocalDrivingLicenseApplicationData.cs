@@ -11,39 +11,39 @@ namespace DVLD_DataAccess
             bool isFound = false;
             string query = "SELECT * FROM LocalDrivingLicenseApplications WHERE LocalDrivingLicenseApplicationID = @LocalDrivingLicenseApplicationID";
             try
-            { 
-              using (SqlConnection connection = new SqlConnection(clsDataAccessSettings.ConnectionString))
-                 {         
-                using(SqlCommand command = new SqlCommand(query, connection))
+            {
+                using (SqlConnection connection = new SqlConnection(clsDataAccessSettings.ConnectionString))
+                {
+                    using (SqlCommand command = new SqlCommand(query, connection))
                     {
-                    command.Parameters.AddWithValue("@LocalDrivingLicenseApplicationID", LocalDrivingLicenseApplicationID);        
-                    connection.Open();
-                     using (SqlDataReader reader = command.ExecuteReader())      
-                          {
-        
-                        if(reader.Read())
+                        command.Parameters.AddWithValue("@LocalDrivingLicenseApplicationID", LocalDrivingLicenseApplicationID);
+                        connection.Open();
+                        using (SqlDataReader reader = command.ExecuteReader())
                         {
-                            isFound = true;
-        
-                    ApplicationID = (int)reader["ApplicationID"];
-                    LicenseClassID = (int)reader["LicenseClassID"];
-                         }
-                        else
-                         {
-                            isFound = false;
-                         }
 
-                  }
+                            if (reader.Read())
+                            {
+                                isFound = true;
+
+                                ApplicationID = (int)reader["ApplicationID"];
+                                LicenseClassID = (int)reader["LicenseClassID"];
+                            }
+                            else
+                            {
+                                isFound = false;
+                            }
+
+                        }
+                    }
                 }
-              }
             }
-            catch(Exception ex)
+            catch (Exception ex)
             {
                 isFound = false;
             }
             finally
             {
-               
+
             }
 
             return isFound;
@@ -90,33 +90,36 @@ namespace DVLD_DataAccess
         public static int AddNewLocalDrivingLicenseApplication(int ApplicationID, int LicenseClassID)
         {
             int LocalDrivingLicenseApplicationID = -1;
-             string query = @"INSERT INTO LocalDrivingLicenseApplications (ApplicationID, LicenseClassID)
+            string query = @"INSERT INTO LocalDrivingLicenseApplications (ApplicationID, LicenseClassID)
                             VALUES (@ApplicationID, @LicenseClassID)
                             SELECT SCOPE_IDENTITY();";
-        try{
-             using( SqlConnection connection = new SqlConnection(clsDataAccessSettings.ConnectionString))
-                {       
-                   using (SqlCommand command = new SqlCommand(query, connection))
+            try
+            {
+                using (SqlConnection connection = new SqlConnection(clsDataAccessSettings.ConnectionString))
+                {
+                    using (SqlCommand command = new SqlCommand(query, connection))
                     {
 
-            command.Parameters.AddWithValue("@ApplicationID", ApplicationID);
-            command.Parameters.AddWithValue("@LicenseClassID", LicenseClassID);
+                        command.Parameters.AddWithValue("@ApplicationID", ApplicationID);
+                        command.Parameters.AddWithValue("@LicenseClassID", LicenseClassID);
+
                         connection.Open();
+
                         object result = command.ExecuteScalar();
-                        if(result != null && int.TryParse(result.ToString(), out int insertedID))
-                      {
-                    LocalDrivingLicenseApplicationID = insertedID;
-                       }
+                        if (result != null && int.TryParse(result.ToString(), out int insertedID))
+                        {
+                            LocalDrivingLicenseApplicationID = insertedID;
+                        }
                     }
-                 }
+                }
             }
-            catch(Exception ex)
+            catch (Exception ex)
             {
 
             }
             finally
             {
-               
+
             }
 
             return LocalDrivingLicenseApplicationID;
@@ -129,28 +132,29 @@ namespace DVLD_DataAccess
                                         ApplicationID = @ApplicationID, 
                             LicenseClassID = @LicenseClassID
                             WHERE LocalDrivingLicenseApplicationID = @LocalDrivingLicenseApplicationID";
-            try{
-                   using(SqlConnection connection = new SqlConnection(clsDataAccessSettings.ConnectionString))
+            try
+            {
+                using (SqlConnection connection = new SqlConnection(clsDataAccessSettings.ConnectionString))
+                {
+                    using (SqlCommand command = new SqlCommand(query, connection))
                     {
-                        using(SqlCommand command = new SqlCommand(query, connection))
-                        {
 
-            command.Parameters.AddWithValue("@LocalDrivingLicenseApplicationID", LocalDrivingLicenseApplicationID);
-            command.Parameters.AddWithValue("@ApplicationID", ApplicationID);
-            command.Parameters.AddWithValue("@LicenseClassID", LicenseClassID);
-                            connection.Open();
-                            rowsAffected = command.ExecuteNonQuery();
-                         }
-                      }
+                        command.Parameters.AddWithValue("@LocalDrivingLicenseApplicationID", LocalDrivingLicenseApplicationID);
+                        command.Parameters.AddWithValue("@ApplicationID", ApplicationID);
+                        command.Parameters.AddWithValue("@LicenseClassID", LicenseClassID);
+                        connection.Open();
+                        rowsAffected = command.ExecuteNonQuery();
+                    }
                 }
-            catch(Exception ex)
+            }
+            catch (Exception ex)
             {
                 return false;
             }
 
             finally
             {
-                
+
             }
 
             return (rowsAffected > 0);
@@ -160,51 +164,53 @@ namespace DVLD_DataAccess
             int rowsAffected = 0;
             string query = @"Delete LocalDrivingLicenseApplications 
                                 where LocalDrivingLicenseApplicationID = @LocalDrivingLicenseApplicationID";
-            try{
-                 using (SqlConnection connection = new SqlConnection(clsDataAccessSettings.ConnectionString))
+            try
+            {
+                using (SqlConnection connection = new SqlConnection(clsDataAccessSettings.ConnectionString))
+                {
+                    using (SqlCommand command = new SqlCommand(query, connection))
                     {
-                        using(SqlCommand command = new SqlCommand(query, connection))
-                        {
-                            command.Parameters.AddWithValue("@LocalDrivingLicenseApplicationID", LocalDrivingLicenseApplicationID);
-                            connection.Open();
-                            rowsAffected = command.ExecuteNonQuery();
-                         }            
+                        command.Parameters.AddWithValue("@LocalDrivingLicenseApplicationID", LocalDrivingLicenseApplicationID);
+                        connection.Open();
+                        rowsAffected = command.ExecuteNonQuery();
                     }
-                 }
-                catch(Exception ex)
-                {
                 }
-                finally
-                {
-                
-                }
+            }
+            catch (Exception ex)
+            {
+            }
+            finally
+            {
+
+            }
             return (rowsAffected > 0);
         }
         public static bool IsLocalDrivingLicenseApplicationExist(int LocalDrivingLicenseApplicationID)
         {
             bool isFound = false;
             string query = "SELECT Found=1 FROM LocalDrivingLicenseApplications WHERE LocalDrivingLicenseApplicationID = @LocalDrivingLicenseApplicationID";
-            try{
-                    using (SqlConnection connection = new SqlConnection(clsDataAccessSettings.ConnectionString))
-                       {
-                            using(SqlCommand command = new SqlCommand(query, connection))
-                            {
-                                command.Parameters.AddWithValue("@LocalDrivingLicenseApplicationID", LocalDrivingLicenseApplicationID);
-                                connection.Open();
-                                using(SqlDataReader reader = command.ExecuteReader())
-                                    {
-                                        isFound = reader.HasRows;
-                                    }
-                              }
-                        }
-                }
-                 catch(Exception ex)
+            try
+            {
+                using (SqlConnection connection = new SqlConnection(clsDataAccessSettings.ConnectionString))
                 {
-                  isFound = false;
-                 }
+                    using (SqlCommand command = new SqlCommand(query, connection))
+                    {
+                        command.Parameters.AddWithValue("@LocalDrivingLicenseApplicationID", LocalDrivingLicenseApplicationID);
+                        connection.Open();
+                        using (SqlDataReader reader = command.ExecuteReader())
+                        {
+                            isFound = reader.HasRows;
+                        }
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                isFound = false;
+            }
             finally
             {
-               
+
             }
 
             return isFound;
@@ -217,28 +223,28 @@ namespace DVLD_DataAccess
                               order by ApplicationDate Desc";
             try
             {
-                    using(SqlConnection connection = new SqlConnection(clsDataAccessSettings.ConnectionString))
+                using (SqlConnection connection = new SqlConnection(clsDataAccessSettings.ConnectionString))
+                {
+                    using (SqlCommand command = new SqlCommand(query, connection))
                     {
-                        using(SqlCommand command = new SqlCommand(query, connection))
+                        connection.Open();
+                        using (SqlDataReader reader = command.ExecuteReader())
                         {
-                            connection.Open();
-                            using(SqlDataReader reader = command.ExecuteReader())
-                                {
-                                    if(reader.HasRows)
-                                {
-                                    dt.Load(reader);
-                                }
-                          }
-                     }  
-                   }
-             }
-            catch(Exception ex)
+                            if (reader.HasRows)
+                            {
+                                dt.Load(reader);
+                            }
+                        }
+                    }
+                }
+            }
+            catch (Exception ex)
             {
 
             }
             finally
             {
-                
+
             }
 
             return dt;

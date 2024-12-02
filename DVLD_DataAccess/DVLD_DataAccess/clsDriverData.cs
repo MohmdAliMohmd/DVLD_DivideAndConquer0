@@ -11,46 +11,46 @@ namespace DVLD_DataAccess
             bool isFound = false;
             string query = "SELECT * FROM Drivers WHERE DriverID = @DriverID";
             try
-            { 
-              using (SqlConnection connection = new SqlConnection(clsDataAccessSettings.ConnectionString))
-                 {         
-                using(SqlCommand command = new SqlCommand(query, connection))
+            {
+                using (SqlConnection connection = new SqlConnection(clsDataAccessSettings.ConnectionString))
+                {
+                    using (SqlCommand command = new SqlCommand(query, connection))
                     {
-                    command.Parameters.AddWithValue("@DriverID", DriverID);        
-                    connection.Open();
-                     using (SqlDataReader reader = command.ExecuteReader())      
-                          {
-        
-                        if(reader.Read())
+                        command.Parameters.AddWithValue("@DriverID", DriverID);
+                        connection.Open();
+                        using (SqlDataReader reader = command.ExecuteReader())
                         {
-                            isFound = true;
-        
-                    PersonID = (int)reader["PersonID"];
-                    CreatedByUserID = (int)reader["CreatedByUserID"];
-                    CreatedDate = (DateTime)reader["CreatedDate"];
-                         }
-                        else
-                         {
-                            isFound = false;
-                         }
 
-                  }
+                            if (reader.Read())
+                            {
+                                isFound = true;
+
+                                PersonID = (int)reader["PersonID"];
+                                CreatedByUserID = (int)reader["CreatedByUserID"];
+                                CreatedDate = (DateTime)reader["CreatedDate"];
+                            }
+                            else
+                            {
+                                isFound = false;
+                            }
+
+                        }
+                    }
                 }
-              }
             }
-            catch(Exception ex)
+            catch (Exception ex)
             {
                 isFound = false;
             }
             finally
             {
-               
+
             }
 
             return isFound;
         }
 
-        public static bool GetDriverByPersonID(int PersonID , ref int DriverID, ref int CreatedByUserID, ref DateTime CreatedDate)
+        public static bool GetDriverByPersonID(int PersonID, ref int DriverID, ref int CreatedByUserID, ref DateTime CreatedDate)
         {
             bool isFound = false;
             string query = "SELECT * FROM Drivers WHERE PersonID = @PersonID";
@@ -93,42 +93,43 @@ namespace DVLD_DataAccess
 
             return isFound;
         }
-        public static int AddNewDriver(int PersonID, int CreatedByUserID, DateTime CreatedDate)
+        public static int AddNewDriver(int PersonID, int CreatedByUserID)
         {
             int DriverID = -1;
-             string query = @"INSERT INTO Drivers (PersonID, CreatedByUserID, CreatedDate)
+            string query = @"INSERT INTO Drivers (PersonID, CreatedByUserID, CreatedDate)
                             VALUES (@PersonID, @CreatedByUserID, @CreatedDate)
                             SELECT SCOPE_IDENTITY();";
-        try{
-             using( SqlConnection connection = new SqlConnection(clsDataAccessSettings.ConnectionString))
-                {       
-                   using (SqlCommand command = new SqlCommand(query, connection))
+            try
+            {
+                using (SqlConnection connection = new SqlConnection(clsDataAccessSettings.ConnectionString))
+                {
+                    using (SqlCommand command = new SqlCommand(query, connection))
                     {
 
-            command.Parameters.AddWithValue("@PersonID", PersonID);
-            command.Parameters.AddWithValue("@CreatedByUserID", CreatedByUserID);
-            command.Parameters.AddWithValue("@CreatedDate", CreatedDate);
+                        command.Parameters.AddWithValue("@PersonID", PersonID);
+                        command.Parameters.AddWithValue("@CreatedByUserID", CreatedByUserID);
+                        command.Parameters.AddWithValue("@CreatedDate", DateTime.Now);
                         connection.Open();
                         object result = command.ExecuteScalar();
-                        if(result != null && int.TryParse(result.ToString(), out int insertedID))
-                      {
-                    DriverID = insertedID;
-                       }
+                        if (result != null && int.TryParse(result.ToString(), out int insertedID))
+                        {
+                            DriverID = insertedID;
+                        }
                     }
-                 }
+                }
             }
-            catch(Exception ex)
+            catch (Exception ex)
             {
 
             }
             finally
             {
-               
+
             }
 
             return DriverID;
         }
-        public static bool UpdateDriver(int DriverID, int PersonID, int CreatedByUserID, DateTime CreatedDate)
+        public static bool UpdateDriver(int DriverID, int PersonID, int CreatedByUserID)
         {
             int rowsAffected = 0;
             string query = @"UPDATE Drivers  
@@ -137,29 +138,30 @@ namespace DVLD_DataAccess
                             CreatedByUserID = @CreatedByUserID, 
                             CreatedDate = @CreatedDate
                             WHERE DriverID = @DriverID";
-            try{
-                   using(SqlConnection connection = new SqlConnection(clsDataAccessSettings.ConnectionString))
+            try
+            {
+                using (SqlConnection connection = new SqlConnection(clsDataAccessSettings.ConnectionString))
+                {
+                    using (SqlCommand command = new SqlCommand(query, connection))
                     {
-                        using(SqlCommand command = new SqlCommand(query, connection))
-                        {
 
-            command.Parameters.AddWithValue("@DriverID", DriverID);
-            command.Parameters.AddWithValue("@PersonID", PersonID);
-            command.Parameters.AddWithValue("@CreatedByUserID", CreatedByUserID);
-            command.Parameters.AddWithValue("@CreatedDate", CreatedDate);
-                            connection.Open();
-                            rowsAffected = command.ExecuteNonQuery();
-                         }
-                      }
+                        command.Parameters.AddWithValue("@DriverID", DriverID);
+                        command.Parameters.AddWithValue("@PersonID", PersonID);
+                        command.Parameters.AddWithValue("@CreatedByUserID", CreatedByUserID);
+                        
+                        connection.Open();
+                        rowsAffected = command.ExecuteNonQuery();
+                    }
                 }
-            catch(Exception ex)
+            }
+            catch (Exception ex)
             {
                 return false;
             }
 
             finally
             {
-                
+
             }
 
             return (rowsAffected > 0);
@@ -169,51 +171,53 @@ namespace DVLD_DataAccess
             int rowsAffected = 0;
             string query = @"Delete Drivers 
                                 where DriverID = @DriverID";
-            try{
-                 using (SqlConnection connection = new SqlConnection(clsDataAccessSettings.ConnectionString))
+            try
+            {
+                using (SqlConnection connection = new SqlConnection(clsDataAccessSettings.ConnectionString))
+                {
+                    using (SqlCommand command = new SqlCommand(query, connection))
                     {
-                        using(SqlCommand command = new SqlCommand(query, connection))
-                        {
-                            command.Parameters.AddWithValue("@DriverID", DriverID);
-                            connection.Open();
-                            rowsAffected = command.ExecuteNonQuery();
-                         }            
+                        command.Parameters.AddWithValue("@DriverID", DriverID);
+                        connection.Open();
+                        rowsAffected = command.ExecuteNonQuery();
                     }
-                 }
-                catch(Exception ex)
-                {
                 }
-                finally
-                {
-                
-                }
+            }
+            catch (Exception ex)
+            {
+            }
+            finally
+            {
+
+            }
             return (rowsAffected > 0);
         }
         public static bool IsDriverExist(int DriverID)
         {
             bool isFound = false;
             string query = "SELECT Found=1 FROM Drivers WHERE DriverID = @DriverID";
-            try{
-                    using (SqlConnection connection = new SqlConnection(clsDataAccessSettings.ConnectionString))
-                       {
-                            using(SqlCommand command = new SqlCommand(query, connection))
-                            {
-                                command.Parameters.AddWithValue("@DriverID", DriverID);
-                                connection.Open();
-                                using(SqlDataReader reader = command.ExecuteReader())
-                                    {
-                                        isFound = reader.HasRows;
-                                    }
-                              }
-                        }
-                }
-                 catch(Exception ex)
+            try
+            {
+                using (SqlConnection connection = new SqlConnection(clsDataAccessSettings.ConnectionString))
                 {
-                  isFound = false;
-                 }
+                    using (SqlCommand command = new SqlCommand(query, connection))
+                    {
+                        command.Parameters.AddWithValue("@DriverID", DriverID);
+                        connection.Open();
+                        using (SqlDataReader reader = command.ExecuteReader())
+                        {
+                            isFound = reader.HasRows;
+                        }
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                isFound = false;
+            }
             finally
             {
-               
+
             }
 
             return isFound;
@@ -224,28 +228,28 @@ namespace DVLD_DataAccess
             string query = "SELECT * FROM Drivers_View order by FullName";
             try
             {
-                    using(SqlConnection connection = new SqlConnection(clsDataAccessSettings.ConnectionString))
+                using (SqlConnection connection = new SqlConnection(clsDataAccessSettings.ConnectionString))
+                {
+                    using (SqlCommand command = new SqlCommand(query, connection))
                     {
-                        using(SqlCommand command = new SqlCommand(query, connection))
+                        connection.Open();
+                        using (SqlDataReader reader = command.ExecuteReader())
                         {
-                            connection.Open();
-                            using(SqlDataReader reader = command.ExecuteReader())
-                                {
-                                    if(reader.HasRows)
-                                {
-                                    dt.Load(reader);
-                                }
-                          }
-                     }  
-                   }
-             }
-            catch(Exception ex)
+                            if (reader.HasRows)
+                            {
+                                dt.Load(reader);
+                            }
+                        }
+                    }
+                }
+            }
+            catch (Exception ex)
             {
 
             }
             finally
             {
-                
+
             }
 
             return dt;

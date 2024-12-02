@@ -119,6 +119,7 @@
             // 
             // txtTitle
             // 
+            this.txtTitle.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtTitle.Location = new System.Drawing.Point(230, 139);
             this.txtTitle.Name = "txtTitle";
             this.txtTitle.Size = new System.Drawing.Size(300, 33);
@@ -141,6 +142,7 @@
             // 
             // txtDescription
             // 
+            this.txtDescription.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtDescription.Location = new System.Drawing.Point(231, 178);
             this.txtDescription.Multiline = true;
             this.txtDescription.Name = "txtDescription";
@@ -237,6 +239,7 @@
             // 
             // txtFees
             // 
+            this.txtFees.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtFees.Location = new System.Drawing.Point(229, 277);
             this.txtFees.Name = "txtFees";
             this.txtFees.Size = new System.Drawing.Size(300, 33);

@@ -292,7 +292,7 @@ namespace DVLD_DataAccess
         public static DataTable GetAllDetainedLicenses()
         {
             DataTable dt = new DataTable();
-            string query = "SELECT * FROM DetainedLicenses";
+            string query = "select * from detainedLicenses_View order by IsReleased ,DetainID;";
             try
             {
                 using (SqlConnection connection = new SqlConnection(clsDataAccessSettings.ConnectionString))

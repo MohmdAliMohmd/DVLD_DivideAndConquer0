@@ -358,7 +358,7 @@
             // 
             // pictureBox9
             // 
-            this.pictureBox9.Image = global::DVLD_DivideAndConquer.Properties.Resources.international_45;
+            this.pictureBox9.Image = global::DVLD_DivideAndConquer.Properties.Resources.International_45;
             this.pictureBox9.Location = new System.Drawing.Point(498, 199);
             this.pictureBox9.Margin = new System.Windows.Forms.Padding(4);
             this.pictureBox9.Name = "pictureBox9";
@@ -380,7 +380,7 @@
             // 
             // pictureBox6
             // 
-            this.pictureBox6.Image = global::DVLD_DivideAndConquer.Properties.Resources.fullname___32;
+            this.pictureBox6.Image = global::DVLD_DivideAndConquer.Properties.Resources.person;
             this.pictureBox6.Location = new System.Drawing.Point(135, 79);
             this.pictureBox6.Margin = new System.Windows.Forms.Padding(4);
             this.pictureBox6.Name = "pictureBox6";
@@ -402,7 +402,7 @@
             // 
             // pictureBox4
             // 
-            this.pictureBox4.Image = global::DVLD_DivideAndConquer.Properties.Resources.gender___32;
+            this.pictureBox4.Image = global::DVLD_DivideAndConquer.Properties.Resources.gender1;
             this.pictureBox4.Location = new System.Drawing.Point(135, 159);
             this.pictureBox4.Margin = new System.Windows.Forms.Padding(4);
             this.pictureBox4.Name = "pictureBox4";
@@ -413,7 +413,7 @@
             // 
             // pictureBox2
             // 
-            this.pictureBox2.Image = global::DVLD_DivideAndConquer.Properties.Resources.at__32;
+            this.pictureBox2.Image = global::DVLD_DivideAndConquer.Properties.Resources.at;
             this.pictureBox2.Location = new System.Drawing.Point(135, 199);
             this.pictureBox2.Margin = new System.Windows.Forms.Padding(4);
             this.pictureBox2.Name = "pictureBox2";

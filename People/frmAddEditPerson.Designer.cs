@@ -480,7 +480,7 @@
             // 
             // pictureBox9
             // 
-            this.pictureBox9.Image = global::DVLD_DivideAndConquer.Properties.Resources.international_45;
+            this.pictureBox9.Image = global::DVLD_DivideAndConquer.Properties.Resources.International_45;
             this.pictureBox9.Location = new System.Drawing.Point(709, 219);
             this.pictureBox9.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.pictureBox9.Name = "pictureBox9";

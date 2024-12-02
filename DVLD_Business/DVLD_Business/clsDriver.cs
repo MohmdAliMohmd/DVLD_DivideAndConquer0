@@ -33,12 +33,12 @@ namespace DVLD_Business
         }
         private bool _AddNewDriver()
         {
-            this.DriverID = (int)clsDriverData.AddNewDriver(this.PersonID, this.CreatedByUserID, this.CreatedDate);
+            this.DriverID = (int)clsDriverData.AddNewDriver(this.PersonID, this.CreatedByUserID);
             return (this.DriverID != -1);
         }
         private bool _UpdateDriver()
         {
-            return clsDriverData.UpdateDriver(this.DriverID, this.PersonID, this.CreatedByUserID, this.CreatedDate);
+            return clsDriverData.UpdateDriver(this.DriverID, this.PersonID, this.CreatedByUserID);
         }
         public static bool DeleteDriver(int DriverID)
         {

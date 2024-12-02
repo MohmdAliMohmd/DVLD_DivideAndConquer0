@@ -128,6 +128,7 @@
             // 
             // txtNotes
             // 
+            this.txtNotes.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtNotes.Location = new System.Drawing.Point(159, 64);
             this.txtNotes.Multiline = true;
             this.txtNotes.Name = "txtNotes";

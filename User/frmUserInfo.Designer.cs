@@ -37,7 +37,7 @@
             // ctrlUserCard1
             // 
             this.ctrlUserCard1.Font = new System.Drawing.Font("Segoe UI Semibold", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ctrlUserCard1.Location = new System.Drawing.Point(3, 75);
+            this.ctrlUserCard1.Location = new System.Drawing.Point(3, 53);
             this.ctrlUserCard1.Margin = new System.Windows.Forms.Padding(6);
             this.ctrlUserCard1.Name = "ctrlUserCard1";
             this.ctrlUserCard1.Size = new System.Drawing.Size(1023, 443);
@@ -81,7 +81,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1028, 526);
+            this.ClientSize = new System.Drawing.Size(1028, 504);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.btnClose);
             this.Controls.Add(this.lblTitle);

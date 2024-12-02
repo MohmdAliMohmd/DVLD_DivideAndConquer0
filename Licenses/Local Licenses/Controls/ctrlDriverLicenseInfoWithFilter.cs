@@ -60,7 +60,7 @@ namespace DVLD_DivideAndConquer.Licenses.Local_Licenses.Controls
             _LicenseID = ctrlDriverLicenseInfo1.LicenseID;
             if(OnLicenseSelected!= null && FilterEnabled)
             {
-                OnLicenseSelected(LicenseID);
+                OnLicenseSelected(_LicenseID);
             }
         }
 

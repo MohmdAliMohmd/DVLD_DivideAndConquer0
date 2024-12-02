@@ -71,7 +71,7 @@
             this.dgvApplicationTypesList.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvApplicationTypesList.ContextMenuStrip = this.cmsApplicationTypes;
             this.dgvApplicationTypesList.EditMode = System.Windows.Forms.DataGridViewEditMode.EditProgrammatically;
-            this.dgvApplicationTypesList.Location = new System.Drawing.Point(5, 75);
+            this.dgvApplicationTypesList.Location = new System.Drawing.Point(11, 75);
             this.dgvApplicationTypesList.Margin = new System.Windows.Forms.Padding(2);
             this.dgvApplicationTypesList.Name = "dgvApplicationTypesList";
             this.dgvApplicationTypesList.Size = new System.Drawing.Size(730, 215);
@@ -88,7 +88,7 @@
             this.toolStripMenuItem2,
             this.toolStripSeparator4});
             this.cmsApplicationTypes.Name = "contextMenuStrip1";
-            this.cmsApplicationTypes.Size = new System.Drawing.Size(266, 68);
+            this.cmsApplicationTypes.Size = new System.Drawing.Size(266, 46);
             // 
             // toolStripSeparator3
             // 
@@ -112,9 +112,9 @@
             // 
             this.lblTitle.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.lblTitle.Font = new System.Drawing.Font("Segoe UI Semibold", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTitle.Location = new System.Drawing.Point(0, 16);
+            this.lblTitle.Location = new System.Drawing.Point(-1, 16);
             this.lblTitle.Name = "lblTitle";
-            this.lblTitle.Size = new System.Drawing.Size(740, 40);
+            this.lblTitle.Size = new System.Drawing.Size(750, 40);
             this.lblTitle.TabIndex = 135;
             this.lblTitle.Text = "Manageme Application Types";
             this.lblTitle.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -125,7 +125,7 @@
             this.btnClose.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.btnClose.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnClose.Image = global::DVLD_DivideAndConquer.Properties.Resources.close_45;
-            this.btnClose.Location = new System.Drawing.Point(689, 11);
+            this.btnClose.Location = new System.Drawing.Point(698, 11);
             this.btnClose.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.btnClose.Name = "btnClose";
             this.btnClose.Size = new System.Drawing.Size(36, 50);
@@ -135,7 +135,7 @@
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(725, 11);
+            this.button1.Location = new System.Drawing.Point(734, 11);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(15, 42);
             this.button1.TabIndex = 137;
@@ -158,7 +158,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoValidate = System.Windows.Forms.AutoValidate.EnableAllowFocusChange;
-            this.ClientSize = new System.Drawing.Size(740, 333);
+            this.ClientSize = new System.Drawing.Size(752, 333);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.btnClose);

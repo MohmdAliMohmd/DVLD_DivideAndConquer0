@@ -174,6 +174,7 @@ namespace DVLD_DivideAndConquer.Applications.Local_Driving_License
             _LocalDrivingLicenseApplication.ApplicationDate = DateTime.Now;
             _LocalDrivingLicenseApplication.ApplicationTypeID = 1;
             _LocalDrivingLicenseApplication.ApplicationStatus = clsApplication.enApplicationStatus.New;
+            _LocalDrivingLicenseApplication.LastStatusDate = DateTime.Now;
             _LocalDrivingLicenseApplication.PaidFees = Convert.ToSingle(lblFees.Text);
             _LocalDrivingLicenseApplication.CreatedByUserID = clsGlobal.CurrentUser.UserID;
             _LocalDrivingLicenseApplication.LicenseClassID = LicenseClassID;

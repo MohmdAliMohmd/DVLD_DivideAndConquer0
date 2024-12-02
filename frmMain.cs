@@ -1,6 +1,8 @@
 ﻿using DVDL_Classes;
 using DVLD_DivideAndConquer.Applications.ApplicationTypes;
+using DVLD_DivideAndConquer.Applications.International_License;
 using DVLD_DivideAndConquer.Applications.Local_Driving_License;
+using DVLD_DivideAndConquer.Applications.Rlease_Detained_License;
 using DVLD_DivideAndConquer.Drivers;
 using DVLD_DivideAndConquer.People;
 using DVLD_DivideAndConquer.Tests.Test_Types;
@@ -93,6 +95,24 @@ namespace DVLD_DivideAndConquer
              frmApplicationTypesList frm = new  frmApplicationTypesList();
             frm.ShowDialog();
         
+        }
+
+        private void manageDetaiToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmDetainedLicensesList frm = new frmDetainedLicensesList();
+            frm.ShowDialog();
+        }
+
+        private void InternaionalLicenseToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmNewInternationalLicenseApplication frm = new frmNewInternationalLicenseApplication();
+            frm.ShowDialog();
+        }
+
+        private void InternaionalLicenseApplicationsToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmInternationalLicesnseApplicationsList frm = new frmInternationalLicesnseApplicationsList();
+            frm.ShowDialog();
         }
     }
 }

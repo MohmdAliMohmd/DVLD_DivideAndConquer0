@@ -16,7 +16,7 @@ namespace DVLD_Business
         {
             this.ApplicationTypeID = -1;
             this.ApplicationTypeTitle = "";
-            this.ApplicationFees = -1;
+            this.ApplicationFees = 0;
             Mode = enMode.AddNew;
         }
         private clsApplicationType(int ApplicationTypeID, string ApplicationTypeTitle, float ApplicationFees)
