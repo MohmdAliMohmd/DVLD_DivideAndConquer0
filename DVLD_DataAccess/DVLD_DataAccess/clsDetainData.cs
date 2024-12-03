@@ -90,7 +90,7 @@ namespace DVLD_DataAccess
 
                                 DetainID = (int)reader["DetainID"];
                                 DetainDate = (DateTime)reader["DetainDate"];
-                                FineFees = (float)reader["FineFees"];
+                                FineFees = Convert.ToSingle(reader["FineFees"]);
                                 CreatedByUserID = (int)reader["CreatedByUserID"];
                                 IsReleased = (bool)reader["IsReleased"];
 

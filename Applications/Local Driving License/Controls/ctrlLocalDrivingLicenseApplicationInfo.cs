@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using DVLD_Business;
 using System.Windows.Forms;
+using DVLD_DivideAndConquer.Licenses.Local_Licenses;
 
 namespace DVLD_DivideAndConquer.Applications.Local_Driving_License.Controls
 {
@@ -15,7 +16,7 @@ namespace DVLD_DivideAndConquer.Applications.Local_Driving_License.Controls
     {
         clsLocalDrivingLicenseApplication _LocalDrivingLicenseApplication;
         int _LocalDrivingLicenseApplicationID = -1;
-        int _LicenseID = -1;
+        int _LicenseID;
 
         #region
         [Category("Local Driving License Info")]
@@ -44,7 +45,7 @@ namespace DVLD_DivideAndConquer.Applications.Local_Driving_License.Controls
         void _FillLocalDrivingLicenseInfo()
         {
 
-            _LicenseID = _LocalDrivingLicenseApplication.GetActiveApplicationID();
+            _LicenseID = _LocalDrivingLicenseApplication.GetActiveLicenseID();
             llblViewLicenseInfo.Enabled = (_LicenseID != -1);
             lblID.Text = _LocalDrivingLicenseApplication.LocalDrivingLicenseApplicationID.ToString();
             lblAppliedFor.Text = clsLicenseClass.Find(_LocalDrivingLicenseApplication.LicenseClassID).ClassName;
@@ -55,7 +56,8 @@ namespace DVLD_DivideAndConquer.Applications.Local_Driving_License.Controls
 
         private void llblViewLicenseInfo_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-            
+            frmShowLicenseInfo frm = new frmShowLicenseInfo(_LocalDrivingLicenseApplication.GetActiveLicenseID());
+            frm.ShowDialog();
         }
 
         public void LoadApplicationInfoByLocalDrivingAppID(int LocalDrivingLicenseApplicationID)

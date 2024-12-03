@@ -65,7 +65,7 @@
             this.toolStripMenuItem1,
             this.releaseDetainedLicenseToolStripMenuItem});
             this.cmsApplications.Name = "contextMenuStrip1";
-            this.cmsApplications.Size = new System.Drawing.Size(328, 152);
+            this.cmsApplications.Size = new System.Drawing.Size(328, 130);
             // 
             // PesonDetailsToolStripMenuItem
             // 
@@ -127,6 +127,9 @@
             this.dgvDetainedLicenses.Size = new System.Drawing.Size(1330, 340);
             this.dgvDetainedLicenses.TabIndex = 166;
             this.dgvDetainedLicenses.TabStop = false;
+            this.dgvDetainedLicenses.CellMouseDoubleClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dgvDetainedLicenses_CellMouseDoubleClick);
+            this.dgvDetainedLicenses.CellMouseLeave += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvDetainedLicenses_CellMouseLeave);
+            this.dgvDetainedLicenses.CellMouseMove += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dgvDetainedLicenses_CellMouseMove);
             // 
             // lblTitle
             // 
@@ -227,6 +230,7 @@
             this.btnReleaseDetainedLicense.Size = new System.Drawing.Size(37, 36);
             this.btnReleaseDetainedLicense.TabIndex = 3;
             this.btnReleaseDetainedLicense.UseVisualStyleBackColor = true;
+            this.btnReleaseDetainedLicense.Click += new System.EventHandler(this.btnReleaseDetainedLicense_Click);
             // 
             // cbIsReleased
             // 
@@ -255,6 +259,7 @@
             this.btnDetainLicense.Size = new System.Drawing.Size(37, 36);
             this.btnDetainLicense.TabIndex = 171;
             this.btnDetainLicense.UseVisualStyleBackColor = true;
+            this.btnDetainLicense.Click += new System.EventHandler(this.btnDetainLicense_Click);
             // 
             // gbFilter
             // 

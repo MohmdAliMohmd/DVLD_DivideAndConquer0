@@ -28,8 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
-            this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
             this.btnCancel = new System.Windows.Forms.Button();
             this.btnIssueLicense = new System.Windows.Forms.Button();
             this.btnClose = new System.Windows.Forms.Button();
@@ -64,7 +62,6 @@
             this.lblTitle = new System.Windows.Forms.Label();
             this.button2 = new System.Windows.Forms.Button();
             this.ctrlDriverLicenseInfoWithFilter1 = new DVLD_DivideAndConquer.Licenses.Local_Licenses.Controls.ctrlDriverLicenseInfoWithFilter();
-            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -75,10 +72,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
             this.SuspendLayout();
-            // 
-            // errorProvider1
-            // 
-            this.errorProvider1.ContainerControl = this;
             // 
             // btnCancel
             // 
@@ -110,6 +103,7 @@
             this.btnIssueLicense.Text = "Issue";
             this.btnIssueLicense.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnIssueLicense.UseVisualStyleBackColor = false;
+            this.btnIssueLicense.Click += new System.EventHandler(this.btnIssueLicense_Click);
             // 
             // btnClose
             // 
@@ -209,6 +203,7 @@
             this.llShowLicenseInfo.TabIndex = 196;
             this.llShowLicenseInfo.TabStop = true;
             this.llShowLicenseInfo.Text = "Show Licenses Info";
+            this.llShowLicenseInfo.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.llShowLicenseInfo_LinkClicked);
             // 
             // llShowLicenseHistory
             // 
@@ -220,6 +215,7 @@
             this.llShowLicenseHistory.TabIndex = 195;
             this.llShowLicenseHistory.TabStop = true;
             this.llShowLicenseHistory.Text = "Show Licenses History";
+            this.llShowLicenseHistory.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.llShowLicenseHistory_LinkClicked);
             // 
             // pictureBox4
             // 
@@ -500,7 +496,7 @@
             this.Name = "frmNewInternationalLicenseApplication";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmNewInternationalLicenseApplication";
-            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
+            this.Load += new System.EventHandler(this.frmNewInternationalLicenseApplication_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
@@ -517,8 +513,6 @@
         }
 
         #endregion
-
-        private System.Windows.Forms.ErrorProvider errorProvider1;
         private System.Windows.Forms.Button btnCancel;
         private System.Windows.Forms.Button btnIssueLicense;
         private System.Windows.Forms.Button btnClose;

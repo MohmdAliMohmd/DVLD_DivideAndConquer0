@@ -504,6 +504,7 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmReleaseDetainedLicenseApplication";
             this.Activated += new System.EventHandler(this.frmReleaseDetainedLicenseApplication_Activated);
+            this.Load += new System.EventHandler(this.frmReleaseDetainedLicenseApplication_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();

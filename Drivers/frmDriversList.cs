@@ -1,5 +1,6 @@
 ﻿using DVDL_Classes;
 using DVLD_Business;
+using DVLD_DivideAndConquer.Licenses;
 using DVLD_DivideAndConquer.People;
 using System;
 using System.Collections.Generic;
@@ -142,6 +143,19 @@ namespace DVLD_DivideAndConquer.Drivers
             frmShowPersonInfo frm = new frmShowPersonInfo((int)dgvDriversList.CurrentRow.Cells[1].Value);
             frm.ShowDialog();
             frmDriversList_Load(null, null);
+        }
+
+        private void toolStripSeparator1_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Not implemented yet.");
+        }
+
+        private void showPersonLicenseHistoryToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            int PersonID = (int)dgvDriversList.CurrentRow.Cells[1].Value;
+
+            frmShowPersonLicenseHistory frm = new frmShowPersonLicenseHistory(PersonID);
+            frm.ShowDialog();
         }
     }
 }

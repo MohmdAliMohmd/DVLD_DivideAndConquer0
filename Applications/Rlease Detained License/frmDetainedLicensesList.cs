@@ -7,8 +7,11 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using DVDL_Classes;
 using DVDL_V0._01.Global_Classes;
 using DVLD_Business;
+using DVLD_DivideAndConquer.Licenses.Detain_License;
+using DVLD_DivideAndConquer.Licenses.Local_Licenses;
 
 namespace DVLD_DivideAndConquer.Applications.Rlease_Detained_License
 {
@@ -183,6 +186,38 @@ Release Application ID*/
         {
             int LicenseID = (int)dgvDetainedLicenses.CurrentRow.Cells[0].Value;
             frmReleaseDetainedLicenseApplication frm = new frmReleaseDetainedLicenseApplication(LicenseID);
+        }
+
+        private void btnReleaseDetainedLicense_Click(object sender, EventArgs e)
+        {
+            frmReleaseDetainedLicenseApplication frm = new frmReleaseDetainedLicenseApplication();
+            frm.ShowDialog();
+            
+            frmDetainedLicensesList_Load(null, null);
+        }
+
+        private void btnDetainLicense_Click(object sender, EventArgs e)
+        {
+            frmDetainLicenseApplication frm = new frmDetainLicenseApplication();
+            frm.ShowDialog();
+            //refresh
+            frmDetainedLicensesList_Load(null, null);
+        }
+
+        private void dgvDetainedLicenses_CellMouseLeave(object sender, DataGridViewCellEventArgs e)
+        {
+            clsGlobal.DataGridView_CellMouseLeave(sender, e);
+        }
+
+        private void dgvDetainedLicenses_CellMouseMove(object sender, DataGridViewCellMouseEventArgs e)
+        {
+            clsGlobal.DataGridView_CellMouseMove(sender, e);
+        }
+
+        private void dgvDetainedLicenses_CellMouseDoubleClick(object sender, DataGridViewCellMouseEventArgs e)
+        {
+            frmShowLicenseInfo frm = new frmShowLicenseInfo((int)dgvDetainedLicenses.CurrentRow.Cells[1].Value);
+            frm.ShowDialog();
         }
     }
 }

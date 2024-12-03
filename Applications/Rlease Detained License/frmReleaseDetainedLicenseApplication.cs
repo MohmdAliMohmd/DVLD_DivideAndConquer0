@@ -17,6 +17,10 @@ namespace DVLD_DivideAndConquer.Applications.Rlease_Detained_License
     public partial class frmReleaseDetainedLicenseApplication : Form
     {
         int _SlectedLicenseID = -1;
+        public frmReleaseDetainedLicenseApplication()
+        {
+            InitializeComponent();
+        }
         public frmReleaseDetainedLicenseApplication(int LicenseID)
         {
             InitializeComponent();
@@ -45,11 +49,13 @@ namespace DVLD_DivideAndConquer.Applications.Rlease_Detained_License
                 return;
             }
 
+
+           
             lblDetainID.Text = ctrlDriverLicenseInfoWithFilter1.SelectedLicenseInfo.DetainedLicenseInfo.DetainID.ToString();
             lblDetainDate.Text = ctrlDriverLicenseInfoWithFilter1.SelectedLicenseInfo.DetainedLicenseInfo.DetainDate.ToShortDateString();
 
             lblLicenseID.Text = ctrlDriverLicenseInfoWithFilter1.SelectedLicenseInfo.LicenseID.ToString();
-            lblApplicationID.Text = ctrlDriverLicenseInfoWithFilter1.SelectedLicenseInfo.DetainedLicenseInfo.ReleaseApplicationID.ToString();
+         
             lblApplicationFees.Text = clsApplicationType.Find((int)clsApplication.enApplicationType.ReleaseDetainedDrivingLicsense).ApplicationFees.ToString();
             
             lblFineFees.Text = ctrlDriverLicenseInfoWithFilter1.SelectedLicenseInfo.DetainedLicenseInfo.FineFees.ToString();
@@ -87,6 +93,25 @@ namespace DVLD_DivideAndConquer.Applications.Rlease_Detained_License
                 return;
             int ApplicationID = -1;
             bool IsReleased = ctrlDriverLicenseInfoWithFilter1.SelectedLicenseInfo.ReleaseDetainedLicense(clsGlobal.CurrentUser.UserID, ref ApplicationID);
+
+            lblApplicationID.Text = ApplicationID.ToString();
+
+            if (!IsReleased)
+            {
+                MessageBox.Show("Faild to to release the Detain License", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+
+            MessageBox.Show("Detained License released Successfully ", "Detained License Released", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+            btnRelease.Enabled = false;
+            ctrlDriverLicenseInfoWithFilter1.FilterEnabled = false;
+            llShowLicenseInfo.Enabled = true;
+        }
+
+        private void frmReleaseDetainedLicenseApplication_Load(object sender, EventArgs e)
+        {
+            btnRelease.Enabled = false;
         }
     }
 }
