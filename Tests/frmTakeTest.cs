@@ -60,8 +60,12 @@ namespace DVLD_DivideAndConquer.Tests
                 lblUserMessage.Visible = true;
                 rbFail.Enabled = false;
                 rbPass.Enabled = false;
+                btnSave.Enabled = false;
             }
+            else
+                _Test = new clsTest();
         }
+        
 
         private void btnSave_Click(object sender, EventArgs e)
         {

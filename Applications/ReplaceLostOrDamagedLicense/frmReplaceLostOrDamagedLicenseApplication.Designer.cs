@@ -113,6 +113,7 @@
             // btnIssueReplacement
             // 
             this.btnIssueReplacement.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.btnIssueReplacement.Enabled = false;
             this.btnIssueReplacement.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnIssueReplacement.Font = new System.Drawing.Font("Segoe UI Semibold", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnIssueReplacement.Image = global::DVLD_DivideAndConquer.Properties.Resources.Issue35;
@@ -446,8 +447,10 @@
             // 
             // frmReplaceLostOrDamagedLicenseApplication
             // 
+            this.AcceptButton = this.btnIssueReplacement;
             this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.CancelButton = this.btnCancel;
             this.ClientSize = new System.Drawing.Size(1259, 543);
             this.Controls.Add(this.gbReplacementFor);
             this.Controls.Add(this.btnCancel);

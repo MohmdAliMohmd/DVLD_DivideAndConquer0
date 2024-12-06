@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.lblInternationalLicensesRecords = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.dgvInternationalLicenses = new System.Windows.Forms.DataGridView();
@@ -86,18 +86,19 @@
             this.dgvInternationalLicenses.MultiSelect = false;
             this.dgvInternationalLicenses.Name = "dgvInternationalLicenses";
             this.dgvInternationalLicenses.ReadOnly = true;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Segoe UI Semibold", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvInternationalLicenses.RowHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI Semibold", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvInternationalLicenses.RowHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.dgvInternationalLicenses.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvInternationalLicenses.Size = new System.Drawing.Size(1102, 340);
             this.dgvInternationalLicenses.TabIndex = 166;
             this.dgvInternationalLicenses.TabStop = false;
+            this.dgvInternationalLicenses.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvInternationalLicenses_CellDoubleClick);
             this.dgvInternationalLicenses.CellMouseLeave += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvInternationalLicenses_CellMouseLeave);
             this.dgvInternationalLicenses.CellMouseMove += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dgvInternationalLicenses_CellMouseMove);
             // 
@@ -109,7 +110,7 @@
             this.showDetailsToolStripMenuItem,
             this.showPersonLicenseHistoryToolStripMenuItem});
             this.cmsApplications.Name = "contextMenuStrip1";
-            this.cmsApplications.Size = new System.Drawing.Size(328, 116);
+            this.cmsApplications.Size = new System.Drawing.Size(328, 94);
             // 
             // PesonDetailsToolStripMenuItem
             // 
@@ -211,6 +212,7 @@
             this.cbIsReleased.Size = new System.Drawing.Size(121, 33);
             this.cbIsReleased.TabIndex = 173;
             this.cbIsReleased.Visible = false;
+            this.cbIsReleased.SelectedIndexChanged += new System.EventHandler(this.cbIsReleased_SelectedIndexChanged);
             // 
             // btnNewApplication
             // 
@@ -235,6 +237,7 @@
             this.txtFilterValue.Name = "txtFilterValue";
             this.txtFilterValue.Size = new System.Drawing.Size(254, 34);
             this.txtFilterValue.TabIndex = 2;
+            this.txtFilterValue.TextChanged += new System.EventHandler(this.txtFilterValue_TextChanged);
             // 
             // cbFilterBy
             // 
@@ -253,6 +256,7 @@
             this.cbFilterBy.Name = "cbFilterBy";
             this.cbFilterBy.Size = new System.Drawing.Size(231, 36);
             this.cbFilterBy.TabIndex = 1;
+            this.cbFilterBy.SelectedIndexChanged += new System.EventHandler(this.cbFilterBy_SelectedIndexChanged);
             // 
             // label2
             // 
@@ -265,7 +269,7 @@
             this.label2.TabIndex = 0;
             this.label2.Text = "Find By:";
             // 
-            // frmListInternationalLicesnseApplications
+            // frmInternationalLicesnseApplicationsList
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -281,7 +285,7 @@
             this.Font = new System.Drawing.Font("Segoe UI Semibold", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Margin = new System.Windows.Forms.Padding(6);
-            this.Name = "frmListInternationalLicesnseApplications";
+            this.Name = "frmInternationalLicesnseApplicationsList";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmListInternationalLicesnseApplications";
             this.Load += new System.EventHandler(this.frmInternationalLicesnseApplicationsList_Load);

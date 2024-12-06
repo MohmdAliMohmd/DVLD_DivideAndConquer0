@@ -31,9 +31,11 @@ namespace DVLD_DivideAndConquer.Applications.Local_Driving_License
         private void frmLocalDrivingLicenseApplicationsList_Load(object sender, EventArgs e)
         {
             _dtAllLocalDrivigLicenseApplications = clsLocalDrivingLicenseApplication.GetAllApplications();
+            
             dgvLocalDrivingLicenseApplications.ColumnHeadersDefaultCellStyle.Font = new Font("Segoe UI", 12, FontStyle.Bold);
             dgvLocalDrivingLicenseApplications.DataSource = _dtAllLocalDrivigLicenseApplications;
             lblRecordsCount.Text = _dtAllLocalDrivigLicenseApplications.Rows.Count.ToString();
+           
             if (_dtAllLocalDrivigLicenseApplications.Rows.Count > 0)
             {
                 dgvLocalDrivingLicenseApplications.Columns[0].HeaderText = "L.D.L.AppID";
@@ -330,7 +332,7 @@ namespace DVLD_DivideAndConquer.Applications.Local_Driving_License
             int LocalDrivingLicenseApplicationID = (int)dgvLocalDrivingLicenseApplications.CurrentRow.Cells[0].Value;
             frmIssueDriverLicenseFirstTime frm = new frmIssueDriverLicenseFirstTime(LocalDrivingLicenseApplicationID);
             frm.ShowDialog();
-            
+
             frmLocalDrivingLicenseApplicationsList_Load(null, null);
         }
     }

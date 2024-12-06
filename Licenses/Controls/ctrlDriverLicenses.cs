@@ -154,5 +154,18 @@ namespace DVLD_DivideAndConquer.Licenses.Controls
             _dtDriverInternaionalLicensesHistory.Clear();
         }
 
+        private void dgvLocalLicensesHistory_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+            int LicenseID = (int)dgvLocalLicensesHistory.CurrentRow.Cells[0].Value;
+            Local_Licenses.frmShowLicenseInfo frm = new Local_Licenses.frmShowLicenseInfo(LicenseID);
+            frm.ShowDialog();
+        }
+
+        private void dgvInternaionalLicensesHistory_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+            int InternaionalLicenseID = (int)dgvInternaionalLicensesHistory.CurrentRow.Cells[0].Value;
+            frmShowInternationalLicenseInfo frm = new frmShowInternationalLicenseInfo(InternaionalLicenseID);
+            frm.ShowDialog();
+        }
     }
 }

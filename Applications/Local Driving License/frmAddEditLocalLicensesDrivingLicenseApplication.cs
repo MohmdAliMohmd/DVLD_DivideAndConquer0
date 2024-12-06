@@ -30,7 +30,7 @@ namespace DVLD_DivideAndConquer.Applications.Local_Driving_License
         {
             InitializeComponent();
 
-            LocalDrivingLicenseApplicationID = _LocalDrivingLicenseApplicationID;
+            _LocalDrivingLicenseApplicationID = LocalDrivingLicenseApplicationID;
             _Mode = enMode.Update;
         }
 

@@ -569,6 +569,7 @@
             // btnReNew
             // 
             this.btnReNew.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.btnReNew.Enabled = false;
             this.btnReNew.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnReNew.Font = new System.Drawing.Font("Segoe UI Semibold", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnReNew.Image = global::DVLD_DivideAndConquer.Properties.Resources.renew_45;

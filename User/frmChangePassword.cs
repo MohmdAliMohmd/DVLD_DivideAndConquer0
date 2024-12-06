@@ -150,7 +150,26 @@ namespace DVLD_DivideAndConquer.User
 
         private void btnCancel_Click(object sender, EventArgs e)
         {
-            _LoadDefaultValues();
+            frmChangePassword_Load(null, null);
+        }
+
+        private void chkShowPassword_CheckedChanged(object sender, EventArgs e)
+        {
+
+            if (chkShowPassword.Checked)
+            {
+                txtNewPassword.UseSystemPasswordChar = false;
+                txtNewPassword.PasswordChar = '\0';
+
+                txtConfirmPW.UseSystemPasswordChar = false;
+                txtConfirmPW.PasswordChar = '\0';
+            }
+            else
+            {
+                txtNewPassword.UseSystemPasswordChar = true;
+                txtConfirmPW.UseSystemPasswordChar = true;
+            }
+
         }
     }
 }

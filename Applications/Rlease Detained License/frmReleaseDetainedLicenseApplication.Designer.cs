@@ -236,6 +236,7 @@
             // btnRelease
             // 
             this.btnRelease.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.btnRelease.Enabled = false;
             this.btnRelease.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnRelease.Font = new System.Drawing.Font("Segoe UI Semibold", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnRelease.Image = global::DVLD_DivideAndConquer.Properties.Resources.release_45;
@@ -504,7 +505,7 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmReleaseDetainedLicenseApplication";
             this.Activated += new System.EventHandler(this.frmReleaseDetainedLicenseApplication_Activated);
-            this.Load += new System.EventHandler(this.frmReleaseDetainedLicenseApplication_Load);
+
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();

@@ -267,9 +267,9 @@
             // 
             this.lblTitle.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.lblTitle.Font = new System.Drawing.Font("Segoe UI Semibold", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTitle.Location = new System.Drawing.Point(-8, 14);
+            this.lblTitle.Location = new System.Drawing.Point(0, 14);
             this.lblTitle.Name = "lblTitle";
-            this.lblTitle.Size = new System.Drawing.Size(1386, 40);
+            this.lblTitle.Size = new System.Drawing.Size(1003, 40);
             this.lblTitle.TabIndex = 129;
             this.lblTitle.Text = "Users Management";
             this.lblTitle.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;

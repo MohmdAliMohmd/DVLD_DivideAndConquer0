@@ -77,7 +77,7 @@ namespace DVLD_DivideAndConquer.Applications.International_License
         {
             frmNewInternationalLicenseApplication frm = new frmNewInternationalLicenseApplication();
             frm.ShowDialog();
-            frmInternationalLicesnseApplicationsList_Load(null,null);
+            frmInternationalLicesnseApplicationsList_Load(null, null);
         }
 
         private void PesonDetailsToolStripMenuItem_Click(object sender, EventArgs e)
@@ -90,7 +90,7 @@ namespace DVLD_DivideAndConquer.Applications.International_License
 
         private void showDetailsToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            int InternationalLicenseID = (int) dgvInternationalLicenses.CurrentRow.Cells[0].Value;
+            int InternationalLicenseID = (int)dgvInternationalLicenses.CurrentRow.Cells[0].Value;
             frmShowInternationalLicenseInfo frm = new frmShowInternationalLicenseInfo(InternationalLicenseID);
             frm.ShowDialog();
         }
@@ -101,6 +101,110 @@ namespace DVLD_DivideAndConquer.Applications.International_License
             int PersonID = clsDriver.FindByDriverID(DriverID).PersonID;
             frmShowPersonLicenseHistory frm = new frmShowPersonLicenseHistory(PersonID);
             frm.ShowDialog();
+        }
+
+        private void dgvInternationalLicenses_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+            int InternationalLicenseID = (int)dgvInternationalLicenses.CurrentRow.Cells[0].Value;
+            frmShowInternationalLicenseInfo frm = new frmShowInternationalLicenseInfo(InternationalLicenseID);
+            frm.ShowDialog();
+        }
+
+        private void cbFilterBy_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (cbFilterBy.Text == "Is Active")
+            {
+                txtFilterValue.Visible = false;
+                cbIsReleased.Visible = true;
+                cbIsReleased.Focus();
+                cbIsReleased.SelectedIndex = 0;
+            }
+            else
+            {
+                txtFilterValue.Visible = true;
+                txtFilterValue.Enabled = (cbFilterBy.Text != "None");
+                cbIsReleased.Visible = false;
+
+                if (cbFilterBy.Text == "None")
+                {
+                    txtFilterValue.Enabled = false;
+                }
+                else
+                    txtFilterValue.Enabled = true;
+
+                txtFilterValue.Text = "";
+                txtFilterValue.Focus();
+            }
+        }
+
+        private void txtFilterValue_TextChanged(object sender, EventArgs e)
+        {
+            string FilterColumn = "";
+            switch (cbFilterBy.Text)
+            {
+                case "International License ID":
+                    FilterColumn = "InternationalLicenseID";
+                    break;
+                case "Application ID":
+                    {
+                        FilterColumn = "ApplicationID";
+                        break;
+                    };
+
+                case "Driver ID":
+                    FilterColumn = "DriverID";
+                    break;
+
+                case "Local License ID":
+                    FilterColumn = "IssuedUsingLocalLicenseID";
+                    break;
+
+                case "Is Active":
+                    FilterColumn = "IsActive";
+                    break;
+
+                default:
+                    FilterColumn = "None";
+                    break;
+            }
+
+
+            if (txtFilterValue.Text.Trim() == "" || FilterColumn == "None")
+            {
+                _dtInternationalLicenseApplications.DefaultView.RowFilter = "";
+                lblInternationalLicensesRecords.Text = dgvInternationalLicenses.Rows.Count.ToString();
+                return;
+            }
+
+            _dtInternationalLicenseApplications.DefaultView.RowFilter = string.Format("[{0}] = {1}", FilterColumn, txtFilterValue.Text.Trim());
+            lblInternationalLicensesRecords.Text = _dtInternationalLicenseApplications.Rows.Count.ToString();
+
+        }
+
+        private void cbIsReleased_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            string FilterColumn = "IsActive";
+            string FilterValue = cbIsReleased.Text;
+
+            switch (FilterValue)
+            {
+                case "All":
+                    break;
+                case "Yes":
+                    FilterValue = "1";
+                    break;
+                case "No":
+                    FilterValue = "0";
+                    break;
+            }
+
+            if (FilterValue == "All")
+                _dtInternationalLicenseApplications.DefaultView.RowFilter = "";
+            else
+                _dtInternationalLicenseApplications.DefaultView.RowFilter = string.Format("[{0}] = {1}", FilterColumn, FilterValue);
+
+            lblInternationalLicensesRecords.Text = _dtInternationalLicenseApplications.Rows.Count.ToString();
+
         }
     }
 }

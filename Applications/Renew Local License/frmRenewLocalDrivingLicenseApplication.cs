@@ -27,7 +27,7 @@ namespace DVLD_DivideAndConquer.Applications.Renew_Local_License
             lblApplicationDate.Text = DateTime.Now.ToShortDateString();
             lblIssueDate.Text = lblApplicationDate.Text;
             lblExpirationDate.Text = "[??/??/????]";
-            lblLicenseFees.Text = clsApplicationType.Find((int)clsApplication.enApplicationType.RenewDrivingLicense).ApplicationFees.ToString();
+            lblApplicationFees.Text = clsApplicationType.Find((int)clsApplication.enApplicationType.RenewDrivingLicense).ApplicationFees.ToString();
             lblCreatedByUser.Text = clsGlobal.CurrentUser.UserName;
 
         }

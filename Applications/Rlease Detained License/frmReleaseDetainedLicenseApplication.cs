@@ -28,6 +28,7 @@ namespace DVLD_DivideAndConquer.Applications.Rlease_Detained_License
 
             ctrlDriverLicenseInfoWithFilter1.LoadLicenseInfo(_SlectedLicenseID);
             ctrlDriverLicenseInfoWithFilter1.FilterEnabled = false;
+       
         }
 
         private void btnClose_Click(object sender, EventArgs e)
@@ -41,11 +42,15 @@ namespace DVLD_DivideAndConquer.Applications.Rlease_Detained_License
             lblLicenseID.Text = _SlectedLicenseID.ToString();
             llShowLicenseHistory.Enabled = (_SlectedLicenseID != -1);
             if (_SlectedLicenseID == -1)
+            {
+                btnRelease.Enabled = false;
                 return;
+            }
 
             if (!ctrlDriverLicenseInfoWithFilter1.SelectedLicenseInfo.IsDetained)
             {
                 MessageBox.Show("This License isn't Detained, Choose another one", "Not allowed", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                btnRelease.Enabled = false;
                 return;
             }
 
@@ -63,8 +68,6 @@ namespace DVLD_DivideAndConquer.Applications.Rlease_Detained_License
             lblCreatedByUser.Text = clsGlobal.CurrentUser.UserName;
 
             btnRelease.Enabled = true;
-            
-            
 
         }
 
@@ -109,9 +112,6 @@ namespace DVLD_DivideAndConquer.Applications.Rlease_Detained_License
             llShowLicenseInfo.Enabled = true;
         }
 
-        private void frmReleaseDetainedLicenseApplication_Load(object sender, EventArgs e)
-        {
-            btnRelease.Enabled = false;
-        }
+       
     }
 }

@@ -193,7 +193,7 @@ Email
             if (cbxFilterBy.Text == "Person ID" || cbxFilterBy.Text == "Phone")
                 e.Handled = !char.IsDigit(e.KeyChar) && !char.IsControl(e.KeyChar);
 
-            if (cbxFilterBy.Text == "First Name" || cbxFilterBy.Text == "Second Name" || cbxFilterBy.Text == "Third Name" || cbxFilterBy.Text == "Last Name" || cbxFilterBy.Text == "Nationality" || cbxFilterBy.Text == "Gendor")
+            if (cbxFilterBy.Text == "First Name" || cbxFilterBy.Text == "Second Name" || cbxFilterBy.Text == "Third Name" || cbxFilterBy.Text == "Last Name" || cbxFilterBy.Text == "Nationality" || cbxFilterBy.Text == "Gender")
                 e.Handled = !char.IsLetter(e.KeyChar) && !char.IsControl(e.KeyChar);
         }
 

@@ -44,6 +44,7 @@
             this.btnClose = new System.Windows.Forms.Button();
             this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
             this.ctrlUserCard1 = new DVLD_DivideAndConquer.User.Controls.ctrlUserCard();
+            this.chkShowPassword = new System.Windows.Forms.CheckBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
@@ -54,10 +55,10 @@
             // 
             this.lblTitle.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.lblTitle.Font = new System.Drawing.Font("Segoe UI Semibold", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTitle.Location = new System.Drawing.Point(13, 15);
+            this.lblTitle.Location = new System.Drawing.Point(0, 15);
             this.lblTitle.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblTitle.Name = "lblTitle";
-            this.lblTitle.Size = new System.Drawing.Size(1030, 40);
+            this.lblTitle.Size = new System.Drawing.Size(1036, 40);
             this.lblTitle.TabIndex = 134;
             this.lblTitle.Text = "Change Password";
             // 
@@ -193,7 +194,7 @@
             this.btnClose.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.btnClose.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnClose.Image = global::DVLD_DivideAndConquer.Properties.Resources.close_45;
-            this.btnClose.Location = new System.Drawing.Point(996, 10);
+            this.btnClose.Location = new System.Drawing.Point(991, 10);
             this.btnClose.Name = "btnClose";
             this.btnClose.Size = new System.Drawing.Size(36, 50);
             this.btnClose.TabIndex = 133;
@@ -213,12 +214,25 @@
             this.ctrlUserCard1.Size = new System.Drawing.Size(1017, 446);
             this.ctrlUserCard1.TabIndex = 0;
             // 
+            // chkShowPassword
+            // 
+            this.chkShowPassword.AutoSize = true;
+            this.chkShowPassword.Font = new System.Drawing.Font("Segoe UI Semibold", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.chkShowPassword.Location = new System.Drawing.Point(496, 623);
+            this.chkShowPassword.Name = "chkShowPassword";
+            this.chkShowPassword.Size = new System.Drawing.Size(161, 29);
+            this.chkShowPassword.TabIndex = 148;
+            this.chkShowPassword.Text = "Show Password";
+            this.chkShowPassword.UseVisualStyleBackColor = true;
+            this.chkShowPassword.CheckedChanged += new System.EventHandler(this.chkShowPassword_CheckedChanged);
+            // 
             // frmChangePassword
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoValidate = System.Windows.Forms.AutoValidate.EnableAllowFocusChange;
             this.ClientSize = new System.Drawing.Size(1036, 699);
+            this.Controls.Add(this.chkShowPassword);
             this.Controls.Add(this.btnCancel);
             this.Controls.Add(this.btnSave);
             this.Controls.Add(this.label1);
@@ -266,5 +280,6 @@
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.TextBox txtCurrentPW;
         private System.Windows.Forms.ErrorProvider errorProvider1;
+        private System.Windows.Forms.CheckBox chkShowPassword;
     }
 }

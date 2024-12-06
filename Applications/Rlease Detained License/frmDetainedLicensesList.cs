@@ -184,8 +184,11 @@ Release Application ID*/
 
         private void releaseDetainedLicenseToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            int LicenseID = (int)dgvDetainedLicenses.CurrentRow.Cells[0].Value;
+            int LicenseID = (int)dgvDetainedLicenses.CurrentRow.Cells[1].Value;
             frmReleaseDetainedLicenseApplication frm = new frmReleaseDetainedLicenseApplication(LicenseID);
+            frm.ShowDialog();
+
+            frmDetainedLicensesList_Load(null, null);
         }
 
         private void btnReleaseDetainedLicense_Click(object sender, EventArgs e)
@@ -200,7 +203,7 @@ Release Application ID*/
         {
             frmDetainLicenseApplication frm = new frmDetainLicenseApplication();
             frm.ShowDialog();
-            //refresh
+            
             frmDetainedLicensesList_Load(null, null);
         }
 

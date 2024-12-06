@@ -140,7 +140,7 @@
             this.toolStripSeparator6,
             this.showPersonLicenseHistoryToolStripMenuItem});
             this.cmsApplications.Name = "contextMenuStrip1";
-            this.cmsApplications.Size = new System.Drawing.Size(364, 302);
+            this.cmsApplications.Size = new System.Drawing.Size(364, 280);
             this.cmsApplications.Opening += new System.ComponentModel.CancelEventHandler(this.cmsApplications_Opening);
             // 
             // showDetailsToolStripMenuItem
@@ -297,6 +297,7 @@
             // 
             // txtFilterValue
             // 
+            this.txtFilterValue.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtFilterValue.Font = new System.Drawing.Font("Segoe UI Semibold", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtFilterValue.Location = new System.Drawing.Point(283, 16);
             this.txtFilterValue.Margin = new System.Windows.Forms.Padding(2);

@@ -36,12 +36,14 @@ namespace DVLD_DivideAndConquer.Applications.International_License
             llShowLicenseHistory.Enabled = (SelectedLicenseID != -1);
             if(SelectedLicenseID == -1)
             {
+                btnIssueLicense.Enabled = false;
                 return;
             }
 
             if(ctrlDriverLicenseInfoWithFilter1.SelectedLicenseInfo.LicenseClass!=3)
             {
                 MessageBox.Show("Selected License should be Class 3, select another one.", "Not allowed", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                btnIssueLicense.Enabled = false;
                 return;
             }
 
@@ -54,6 +56,7 @@ namespace DVLD_DivideAndConquer.Applications.International_License
                 btnIssueLicense.Enabled = false;
                 return; 
             }
+            btnIssueLicense.Enabled = true;
         }
 
         private void btnIssueLicense_Click(object sender, EventArgs e)

@@ -19,8 +19,9 @@ namespace DVLD_Business
         {
             get
             {
-                return base.PersonInfo.FullName;
-                    
+                //return base.PersonInfo.FullName;
+                return clsPerson.Find(ApplicantPersonID).FullName;
+
             }
         }
         public clsLocalDrivingLicenseApplication()
@@ -258,7 +259,7 @@ namespace DVLD_Business
         public int IssueLicenseForTheFirtTime(string Notes, int CreatedByUserID)
         {
             int DriverID = -1;
-            clsDriver Driver = clsDriver.FindByDriverID(this.ApplicantPersonID);
+            clsDriver Driver = clsDriver.FindByPersonID(this.ApplicantPersonID);
             if (Driver == null)
             {
                 Driver = new clsDriver();
@@ -277,7 +278,29 @@ namespace DVLD_Business
             {
                 DriverID = Driver.DriverID;
             }
-            return DriverID;
+
+            clsLicense License = new clsLicense();
+            License.ApplicationID = this.ApplicationID;
+            License.DriverID = DriverID;
+            License.LicenseClass = this.LicenseClassID;
+            License.IssueDate = DateTime.Now;
+            License.ExpirationDate = DateTime.Now.AddYears(this.LicenseClassInfo.DefaultValidityLength);
+            License.Notes = Notes;
+            License.PaidFees = this.LicenseClassInfo.ClassFees;
+            License.IsActive = true;
+            License.IssueReason = clsLicense.enIssueReason.FirstTime;
+            License.CreatedByUserID = CreatedByUserID;
+
+            if (License.Save())
+            {
+                //now we should set the application status to complete.
+                this.SetComplete();
+
+                return License.LicenseID;
+            }
+
+            else
+                return -1;
 
         }
 

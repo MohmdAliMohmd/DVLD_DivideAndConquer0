@@ -30,7 +30,7 @@ namespace DVLD_DataAccess
                                 TestTypeID = (int)reader["TestTypeID"];
                                 LocalDrivingLicenseApplicationID = (int)reader["LocalDrivingLicenseApplicationID"];
                                 AppointmentDate = (DateTime)reader["AppointmentDate"];
-                                PaidFees = (float)reader["PaidFees"];
+                                PaidFees = Convert.ToSingle(reader["PaidFees"]);
                                 CreatedByUserID = (int)reader["CreatedByUserID"];
                                 IsLocked = (bool)reader["IsLocked"];
                                 if (reader["RetakeTestApplicationID"] == DBNull.Value)

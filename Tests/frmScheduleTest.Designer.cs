@@ -41,7 +41,7 @@
             this.ctrlScheduleTest1.Location = new System.Drawing.Point(0, 58);
             this.ctrlScheduleTest1.Margin = new System.Windows.Forms.Padding(6);
             this.ctrlScheduleTest1.Name = "ctrlScheduleTest1";
-            this.ctrlScheduleTest1.Size = new System.Drawing.Size(833, 529);
+            this.ctrlScheduleTest1.Size = new System.Drawing.Size(833, 517);
             this.ctrlScheduleTest1.TabIndex = 0;
             this.ctrlScheduleTest1.TestTypeID = DVLD_Business.clsTestType.enTestType.VisionTest;
             // 
@@ -94,7 +94,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(833, 590);
+            this.ClientSize = new System.Drawing.Size(833, 569);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.btnClose);

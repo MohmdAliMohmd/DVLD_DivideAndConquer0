@@ -323,6 +323,7 @@
             // btnDetain
             // 
             this.btnDetain.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+            this.btnDetain.Enabled = false;
             this.btnDetain.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnDetain.Font = new System.Drawing.Font("Segoe UI Semibold", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnDetain.Image = global::DVLD_DivideAndConquer.Properties.Resources.Detain_50;

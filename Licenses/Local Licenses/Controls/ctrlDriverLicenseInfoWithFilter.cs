@@ -32,6 +32,7 @@ namespace DVLD_DivideAndConquer.Licenses.Local_Licenses.Controls
 
         int _LicenseID = -1;
         bool _FilterEnabled = true;
+        
         #region
         [Category("License With Filter Info")]
         public int LicenseID

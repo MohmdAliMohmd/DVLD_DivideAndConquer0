@@ -51,7 +51,7 @@
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(630, 12);
+            this.button1.Location = new System.Drawing.Point(762, 12);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(15, 42);
             this.button1.TabIndex = 230;
@@ -75,7 +75,7 @@
             this.btnClose.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.btnClose.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnClose.Image = global::DVLD_DivideAndConquer.Properties.Resources.close_45;
-            this.btnClose.Location = new System.Drawing.Point(594, 12);
+            this.btnClose.Location = new System.Drawing.Point(726, 12);
             this.btnClose.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.btnClose.Name = "btnClose";
             this.btnClose.Size = new System.Drawing.Size(36, 50);
@@ -89,7 +89,7 @@
             this.lblTitle.Font = new System.Drawing.Font("Segoe UI Semibold", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTitle.Location = new System.Drawing.Point(0, 17);
             this.lblTitle.Name = "lblTitle";
-            this.lblTitle.Size = new System.Drawing.Size(647, 40);
+            this.lblTitle.Size = new System.Drawing.Size(778, 40);
             this.lblTitle.TabIndex = 229;
             this.lblTitle.Text = "Vision Test Appointments";
             this.lblTitle.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -107,7 +107,7 @@
             this.groupBox1.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox1.Location = new System.Drawing.Point(12, 495);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(628, 166);
+            this.groupBox1.Size = new System.Drawing.Size(754, 166);
             this.groupBox1.TabIndex = 232;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Test Result";
@@ -132,7 +132,7 @@
             this.txtNotes.Location = new System.Drawing.Point(159, 64);
             this.txtNotes.Multiline = true;
             this.txtNotes.Name = "txtNotes";
-            this.txtNotes.Size = new System.Drawing.Size(459, 91);
+            this.txtNotes.Size = new System.Drawing.Size(573, 91);
             this.txtNotes.TabIndex = 206;
             // 
             // rbFail
@@ -211,7 +211,7 @@
             this.btnCancel.Font = new System.Drawing.Font("Segoe UI Semibold", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCancel.Image = global::DVLD_DivideAndConquer.Properties.Resources.cancel2_50;
             this.btnCancel.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnCancel.Location = new System.Drawing.Point(330, 677);
+            this.btnCancel.Location = new System.Drawing.Point(444, 667);
             this.btnCancel.Name = "btnCancel";
             this.btnCancel.Size = new System.Drawing.Size(148, 43);
             this.btnCancel.TabIndex = 234;
@@ -227,7 +227,7 @@
             this.btnSave.Font = new System.Drawing.Font("Segoe UI Semibold", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSave.Image = global::DVLD_DivideAndConquer.Properties.Resources.save50;
             this.btnSave.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnSave.Location = new System.Drawing.Point(482, 677);
+            this.btnSave.Location = new System.Drawing.Point(596, 667);
             this.btnSave.Name = "btnSave";
             this.btnSave.Size = new System.Drawing.Size(148, 43);
             this.btnSave.TabIndex = 233;
@@ -242,14 +242,14 @@
             this.ctrlSecheduledTest1.Location = new System.Drawing.Point(6, 80);
             this.ctrlSecheduledTest1.Margin = new System.Windows.Forms.Padding(6);
             this.ctrlSecheduledTest1.Name = "ctrlSecheduledTest1";
-            this.ctrlSecheduledTest1.Size = new System.Drawing.Size(634, 421);
+            this.ctrlSecheduledTest1.Size = new System.Drawing.Size(773, 421);
             this.ctrlSecheduledTest1.TabIndex = 0;
             // 
             // frmTakeTest
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(647, 741);
+            this.ClientSize = new System.Drawing.Size(778, 718);
             this.Controls.Add(this.btnCancel);
             this.Controls.Add(this.btnSave);
             this.Controls.Add(this.groupBox1);
@@ -262,6 +262,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Margin = new System.Windows.Forms.Padding(6);
             this.Name = "frmTakeTest";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmTakeTest";
             this.Load += new System.EventHandler(this.frmTakeTest_Load);
             this.groupBox1.ResumeLayout(false);

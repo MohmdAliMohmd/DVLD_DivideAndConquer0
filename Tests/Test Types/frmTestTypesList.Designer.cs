@@ -97,6 +97,7 @@
             this.dgvTestTypesList.Name = "dgvTestTypesList";
             this.dgvTestTypesList.Size = new System.Drawing.Size(942, 215);
             this.dgvTestTypesList.TabIndex = 140;
+            this.dgvTestTypesList.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvTestTypesList_CellDoubleClick);
             this.dgvTestTypesList.CellMouseLeave += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvTestTypesList_CellMouseLeave);
             this.dgvTestTypesList.CellMouseMove += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dgvTestTypesList_CellMouseMove);
             // 
@@ -108,7 +109,7 @@
             this.editToolStripMenuItem,
             this.toolStripSeparator1});
             this.cmsTestTypes.Name = "contextMenuStrip1";
-            this.cmsTestTypes.Size = new System.Drawing.Size(201, 68);
+            this.cmsTestTypes.Size = new System.Drawing.Size(201, 46);
             // 
             // toolStripSeparator2
             // 

@@ -149,7 +149,6 @@ namespace DVLD_Business
         }
 
         public bool SetComplete()
-
         {
             return clsApplicationData.UpdateStatus(ApplicationID, 3);
         }

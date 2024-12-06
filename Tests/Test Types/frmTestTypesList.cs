@@ -62,5 +62,12 @@ namespace DVLD_DivideAndConquer.Tests.Test_Types
             frm.ShowDialog();
             frmTestTypesList_Load(null, null);
         }
+
+        private void dgvTestTypesList_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+            frmEditTestType frm = new frmEditTestType((clsTestType.enTestType)dgvTestTypesList.CurrentRow.Cells[0].Value);
+            frm.ShowDialog();
+            frmTestTypesList_Load(null, null);
+        }
     }
 }

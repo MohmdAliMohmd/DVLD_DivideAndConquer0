@@ -67,7 +67,10 @@ namespace DVLD_DivideAndConquer.Applications.ReplaceLostOrDamagedLicense
             lblOldLicenseID.Text = SelectedLicenseID.ToString();
             llShowLicenseHistory.Enabled = (SelectedLicenseID != -1);
             if (SelectedLicenseID == -1)
+            {
+                btnIssueReplacement.Enabled = false;
                 return;
+            }
 
             if (!ctrlDriverLicenseInfoWithFilter1.SelectedLicenseInfo.IsActive)
             {
