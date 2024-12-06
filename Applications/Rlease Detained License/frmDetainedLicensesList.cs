@@ -10,6 +10,7 @@ using System.Windows.Forms;
 using DVDL_Classes;
 using DVDL_V0._01.Global_Classes;
 using DVLD_Business;
+using DVLD_DivideAndConquer.Licenses;
 using DVLD_DivideAndConquer.Licenses.Detain_License;
 using DVLD_DivideAndConquer.Licenses.Local_Licenses;
 
@@ -221,6 +222,19 @@ Release Application ID*/
         {
             frmShowLicenseInfo frm = new frmShowLicenseInfo((int)dgvDetainedLicenses.CurrentRow.Cells[1].Value);
             frm.ShowDialog();
+        }
+
+        private void showPersonLicenseHistoryToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            int LicenseID = (int)dgvDetainedLicenses.CurrentRow.Cells[1].Value;
+            int PersonID = clsLicense.Find(LicenseID).DriverInfo.PersonID;
+            frmShowPersonLicenseHistory frm = new frmShowPersonLicenseHistory(PersonID);
+            frm.ShowDialog();
+        }
+
+        private void cmsApplications_Opening(object sender, CancelEventArgs e)
+        {
+            releaseDetainedLicenseToolStripMenuItem.Enabled = !(bool)dgvDetainedLicenses.CurrentRow.Cells[3].Value;
         }
     }
 }

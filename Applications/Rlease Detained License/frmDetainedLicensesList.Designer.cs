@@ -65,7 +65,8 @@
             this.toolStripMenuItem1,
             this.releaseDetainedLicenseToolStripMenuItem});
             this.cmsApplications.Name = "contextMenuStrip1";
-            this.cmsApplications.Size = new System.Drawing.Size(328, 130);
+            this.cmsApplications.Size = new System.Drawing.Size(328, 152);
+            this.cmsApplications.Opening += new System.ComponentModel.CancelEventHandler(this.cmsApplications_Opening);
             // 
             // PesonDetailsToolStripMenuItem
             // 
@@ -87,6 +88,7 @@
             this.showPersonLicenseHistoryToolStripMenuItem.Name = "showPersonLicenseHistoryToolStripMenuItem";
             this.showPersonLicenseHistoryToolStripMenuItem.Size = new System.Drawing.Size(327, 30);
             this.showPersonLicenseHistoryToolStripMenuItem.Text = "Show Person License History";
+            this.showPersonLicenseHistoryToolStripMenuItem.Click += new System.EventHandler(this.showPersonLicenseHistoryToolStripMenuItem_Click);
             // 
             // toolStripMenuItem1
             // 
